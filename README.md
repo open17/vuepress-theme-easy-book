@@ -13,8 +13,8 @@ A flat theme for Vuepress site
 
 
 
-## 示例 & 文档
-[示例](https://open17.github.io/vuepress-theme-easy-book/)
+## 示例
+[文档](https://open17.github.io/vuepress-theme-easy-book/)
 
 ## 功能
 ### 导航栏
@@ -40,21 +40,4 @@ A flat theme for Vuepress site
 - 信息提示增强
 - 滚动条美化
 - 404页面
-
-
-## 示例 & 文档
-[这里](https://open17.github.io/vuepress-theme-easy-book/)
-
-## Installation
-```
-npm i vuepress-theme-easy-book
-```
-## Importing the Theme
-```js
-// .vuepress/config.js
-  module.exports = {
-      // Use this theme
-      theme: 'easy-book',
-  }
-```
 
