@@ -1,0 +1,106 @@
+.bcolor {
+    background-color: #f2f3f5;
+  }
+  .black{
+    color: #000;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .flex {
+    display: flex;
+  }
+  .fixed {
+    position: fixed;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-end {
+    justify-content: flex-end;
+  }
+  .justify-start {
+    justify-content: flex-start;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .hidden {
+    display: none;
+  }
+  .w-screen {
+    width: 100vw !important;
+  }
+  .pl-10 {
+    padding-left: 10px;
+  }
+  .pr-10 {
+    padding-right: 10px;
+  }
+  .h-screen {
+    height: 100vh;
+  }
+  .text-xl {
+    font-size: 1.5rem;
+  }
+  * {
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+      "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+  .font-art {
+    font-family: sans-serif;
+  }
+  .space-x-10 > * {
+    margin-left: 1.25rem;
+  }
+  
+  .space-x-10 > *:first-child {
+    margin-left: 0;
+  }
+  .hover-color:hover {
+    color: #409eff;
+  }
+  
+  .overflow-y {
+    overflow-y: auto;
+  }
+  .overflow-x {
+    overflow-x: scroll;
+  }
+  .main-body {
+    position: absolute;
+    bottom: 0vh;
+    top: 20vh;
+  }
+  /* WebKit 内核浏览器样式化 */
+  ::-webkit-scrollbar {
+    width: 6px; /* 滚动条宽度 */
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: gray;
+  }
+  /* Firefox 浏览器样式化 */
+  * {
+    scrollbar-width: thin; /* 滚动条宽度 */
+  }
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    color: #1e80ff;
+  }
+  .min-w-55 {
+    min-width: 55vw;
+  }
+  .min-w-65 {
+    min-width: 65vw;
+  }
+  .h-full{
+    height: 100%;
+  }
+  .w-full{
+    width: 100%;
+  }

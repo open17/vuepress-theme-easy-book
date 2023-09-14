@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>功能展示页 | Easy-Book</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/ebook/assets/css/0.styles.a3f12ce0.css" as="style"><link rel="preload" href="/ebook/assets/js/app.d67de612.js" as="script"><link rel="preload" href="/ebook/assets/js/3.8854c265.js" as="script"><link rel="preload" href="/ebook/assets/js/5.91f704ab.js" as="script"><link rel="prefetch" href="/ebook/assets/js/1.9a77447e.js"><link rel="prefetch" href="/ebook/assets/js/10.fbe63955.js"><link rel="prefetch" href="/ebook/assets/js/11.8b017cc8.js"><link rel="prefetch" href="/ebook/assets/js/12.a17ab6f3.js"><link rel="prefetch" href="/ebook/assets/js/13.cf6547b1.js"><link rel="prefetch" href="/ebook/assets/js/14.e30613c8.js"><link rel="prefetch" href="/ebook/assets/js/15.8f0285fc.js"><link rel="prefetch" href="/ebook/assets/js/4.5cb2b28f.js"><link rel="prefetch" href="/ebook/assets/js/6.a4756d69.js"><link rel="prefetch" href="/ebook/assets/js/7.c3ef3c94.js"><link rel="prefetch" href="/ebook/assets/js/8.e9f0cbb1.js"><link rel="prefetch" href="/ebook/assets/js/9.d96c9ae3.js">
+    <link rel="stylesheet" href="/ebook/assets/css/0.styles.a3f12ce0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="overflow-x-hidden"><div><div tabindex="-1" class="el-drawer__wrapper" style="display:none;"><div role="document" tabindex="-1" class="el-drawer__container"><div aria-modal="true" aria-labelledby="el-drawer__title" aria-label="全文搜索" role="dialog" tabindex="-1" class="el-drawer ttb" style="height:75%;"><header id="el-drawer__title" class="el-drawer__header"><span role="heading" title="全文搜索">全文搜索</span><button aria-label="close 全文搜索" type="button" class="el-drawer__close-btn"><i class="el-dialog__close el-icon el-icon-close"></i></button></header><!----></div></div></div> <div class="el-dialog__wrapper" style="display:none;"><div role="dialog" aria-modal="true" aria-label="设置" class="el-dialog" style="margin-top:15vh;width:80%;"><div class="el-dialog__header"><span class="el-dialog__title">设置</span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button></div><!----><div class="el-dialog__footer"><div class="dialog-footer"><button type="button" class="el-button el-button--default"><!----><!----><span>恢复默认</span></button> <button type="button" class="el-button el-button--primary"><!----><!----><span>应用</span></button></div></div></div></div> <header><div class="flex justify-between items-center"><div class="items-center flex justify-start space-x-10"><i class="el-icon-guide text-xl"></i> <h2>Easy-Book</h2></div> <div class="items-center space-x-10"><span><div role="tooltip" id="el-popover-8811" aria-hidden="true" class="el-popover el-popper el-popover--plain" style="width:200px;display:none;"><div class="el-popover__title">搜索</div>点击图标,开始全文搜索</div><span class="el-popover__reference-wrapper"><a class="hover-color el-icon-search text-xl"></a></span></span> <span><div role="tooltip" id="el-popover-7834" aria-hidden="true" class="el-popover el-popper el-popover--plain" style="width:200px;display:none;"><div class="el-popover__title">明亮/黑暗</div>点击图标,切换明亮/黑暗模式</div><span class="el-popover__reference-wrapper"><a class="hover-color text-xl el-icon-sunrise-1"></a></span></span> <span><div role="tooltip" id="el-popover-8167" aria-hidden="true" class="el-popover el-popper el-popover--plain" style="width:200px;display:none;"><div class="el-popover__title">奶茶杯</div>点我切换语言</div><span class="el-popover__reference-wrapper"><a class="hover-color el-icon-milk-tea text-xl"></a></span></span> <span><div role="tooltip" id="el-popover-3667" aria-hidden="true" class="el-popover el-popper el-popover--plain" style="width:200px;display:none;"><div class="el-popover__title">设置</div>自定义网站</div><span class="el-popover__reference-wrapper"><a class="hover-color el-icon-setting text-xl"></a></span></span></div></div> <ul role="menubar" class="w-screen pl-10 pr-10 el-menu--horizontal el-menu" style="background-color:;"><li role="menuitem" tabindex="-1" class="el-menu-item flex items-center" style="color:;border-bottom-color:transparent;background-color:;"><a href="/ebook/" aria-current="page" class="h-full w-full router-link-exact-active router-link-active">
+          首页
+        </a></li></ul></header></div> <div class="flex justify-end space-x-10 main-body"><div><div class="LeftNav" style="width:15vw;" data-v-557ed612><ul role="menubar" class="el-menu" style="background-color:;" data-v-557ed612><!----> <!----> <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left:20px;color:;background-color:;" data-v-557ed612><i class="el-icon-share" data-v-557ed612></i> <span data-v-557ed612>分享</span></li> <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left:20px;color:;background-color:;" data-v-557ed612><i class="el-icon-s-management" data-v-557ed612></i> <span data-v-557ed612>书签</span></li> <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left:20px;color:;background-color:;" data-v-557ed612><i class="el-icon-s-comment" data-v-557ed612></i> <span data-v-557ed612>留言墙</span></li> <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left:20px;color:;background-color:;" data-v-557ed612><i class="el-icon-s-promotion" data-v-557ed612></i> <span data-v-557ed612>回到顶部</span></li> <li role="menuitem" tabindex="-1" class="el-menu-item is-active" style="padding-left:20px;color:;background-color:;" data-v-557ed612><i class="el-icon-arrow-left" data-v-557ed612></i> <span data-v-557ed612>
+        收起
+      </span></li></ul></div></div> <div class="el-card box-card overflow-y is-always-shadow"><!----><div class="el-card__body"><div class="markdown-body content__default min-w-55"><h1 id="功能展示页"><a href="#功能展示页" class="header-anchor">#</a> 功能展示页</h1> <h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p>题目源自某场leetcode周赛</p> <h2 id="t1-字符串中最大的-3-位相同数字"><a href="#t1-字符串中最大的-3-位相同数字" class="header-anchor">#</a> T1 字符串中最大的 3 位相同数字</h2> <div class="el-card is-hover-shadow"><!----><div class="el-card__body"><div class="el-tabs el-tabs--top"><div class="el-tabs__header is-top"><div class="el-tabs__nav-wrap is-top"><div class="el-tabs__nav-scroll"><div role="tablist" class="el-tabs__nav is-top" style="transform:translateX(-0px);"><div class="el-tabs__active-bar is-top" style="width:0px;transform:translateX(0px);ms-transform:translateX(0px);webkit-transform:translateX(0px);"></div></div></div></div></div><div class="el-tabs__content"><div role="tabpanel" aria-hidden="true" id="pane-null" aria-labelledby="tab-null" class="el-tab-pane" style="display:none;"><p>给你一个字符串 num ，表示一个大整数。如果一个整数满足下述所有条件，则认为该整数是一个 优质整数 ：</p> <p>该整数是 num 的一个长度为 3 的 子字符串 。<br>
+该整数由唯一一个数字重复 3 次组成。<br>
+以字符串形式返回 最大的优质整数 。如果不存在满足要求的整数，则返回一个空字符串 &quot;&quot; 。</p> <p>注意：</p> <p>子字符串 是字符串中的一个连续字符序列。<br>
+num 或优质整数中可能存在 前导零 。</p></div><div role="tabpanel" aria-hidden="true" id="pane-null" aria-labelledby="tab-null" class="el-tab-pane" style="display:none;"><div class="mycodeblock" style="position:relative;"><pre><code>输入：num = &quot;6777133339&quot;              
+输出：&quot;777&quot;
+解释：num 中存在两个优质整数：&quot;777&quot; 和 &quot;333&quot; 。
+&quot;777&quot; 是最大的那个，所以返回 &quot;777&quot; 。
+</code></pre><button data-clipboard-text="输入：num = &quot;6777133339&quot;              
+输出：&quot;777&quot;
+解释：num 中存在两个优质整数：&quot;777&quot; 和 &quot;333&quot; 。
+&quot;777&quot; 是最大的那个，所以返回 &quot;777&quot; 。
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div></div><div role="tabpanel" aria-hidden="true" id="pane-null" aria-labelledby="tab-null" class="el-tab-pane" style="display:none;"><div class="mycodeblock" style="position:relative;"><pre><code>输入：num = &quot;2300019&quot;
+输出：&quot;000&quot;
+解释：&quot;000&quot; 是唯一一个优质整数。
+</code></pre><button data-clipboard-text="输入：num = &quot;2300019&quot;
+输出：&quot;000&quot;
+解释：&quot;000&quot; 是唯一一个优质整数。
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div></div><div role="tabpanel" aria-hidden="true" id="pane-null" aria-labelledby="tab-null" class="el-tab-pane" style="display:none;"><div class="mycodeblock" style="position:relative;"><pre><code>输入：num = &quot;42352338&quot;
+输出：&quot;&quot;
+解释：不存在长度为 3 且仅由一个唯一数字组成的整数。因此，不存在优质整数。
+</code></pre><button data-clipboard-text="输入：num = &quot;42352338&quot;
+输出：&quot;&quot;
+解释：不存在长度为 3 且仅由一个唯一数字组成的整数。因此，不存在优质整数。
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div></div><div role="tabpanel" aria-hidden="true" id="pane-null" aria-labelledby="tab-null" class="el-tab-pane" style="display:none;"><div class="mycodeblock" style="position:relative;"><pre><code>3 &lt;= num.length &lt;= 1000
+num 仅由数字（0 - 9）组成
+</code></pre><button data-clipboard-text="3 &lt;= num.length &lt;= 1000
+num 仅由数字（0 - 9）组成
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div></div><div role="tabpanel" aria-hidden="true" id="pane-null" aria-labelledby="tab-null" class="el-tab-pane" style="display:none;"><p>模拟</p> <div class="mycodeblock" style="position:relative;"><pre><code><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function">string <span class="hljs-title">largestGoodInteger</span><span class="hljs-params">(string num)</span> </span>{
+        <span class="hljs-type">int</span> l=<span class="hljs-number">2</span>;
+        <span class="hljs-type">int</span> p=<span class="hljs-number">-1</span>;
+        <span class="hljs-type">int</span> ans=<span class="hljs-number">-1</span>;
+        <span class="hljs-keyword">while</span>(l&lt;num.<span class="hljs-built_in">size</span>()){
+            <span class="hljs-keyword">if</span>(num[l<span class="hljs-number">-2</span>]==num[l<span class="hljs-number">-1</span>]&amp;&amp;num[l<span class="hljs-number">-1</span>]==num[l]){
+                <span class="hljs-keyword">if</span>(p&lt;(num[l]-<span class="hljs-string">'0'</span>)){
+                    p=num[l]-<span class="hljs-string">'0'</span>;
+                    ans=l;
+                }
+                l+=<span class="hljs-number">3</span>;
+            }
+            <span class="hljs-keyword">else</span>{
+                l++;
+            }
+        }
+        <span class="hljs-keyword">if</span>(ans==<span class="hljs-number">-1</span>)<span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>;
+        <span class="hljs-keyword">return</span> num.<span class="hljs-built_in">substr</span>(ans<span class="hljs-number">-2</span>,<span class="hljs-number">3</span>);
+    }
+};
+</code></pre><button data-clipboard-text="class Solution {
+public:
+    string largestGoodInteger(string num) {
+        int l=2;
+        int p=-1;
+        int ans=-1;
+        while(l&lt;num.size()){
+            if(num[l-2]==num[l-1]&amp;&amp;num[l-1]==num[l]){
+                if(p&lt;(num[l]-'0')){
+                    p=num[l]-'0';
+                    ans=l;
+                }
+                l+=3;
+            }
+            else{
+                l++;
+            }
+        }
+        if(ans==-1)return &quot;&quot;;
+        return num.substr(ans-2,3);
+    }
+};
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div></div></div></div></div></div><h2 id="t2-统计值等于子树平均值的节点数"><a href="#t2-统计值等于子树平均值的节点数" class="header-anchor">#</a> T2 统计值等于子树平均值的节点数</h2> <p>给你一棵二叉树的根节点 root ，找出并返回满足要求的节点数，要求节点的值等于其 子树 中值的 平均值 。</p> <p>注意：</p> <p>n 个元素的平均值可以由 n 个元素 求和 然后再除以 n ，并 向下舍入 到最近的整数。<br>
+root 的 子树 由 root 和它的所有后代组成。</p> <p>示例 1：<br> <div class="el-image"><div class="el-image__placeholder"></div><!----></div></p> <div class="mycodeblock" style="position:relative;"><pre><code>输入：root = [4,8,5,0,1,null,6]
+输出：5
+解释：
+对值为 4 的节点：子树的平均值 (4 + 8 + 5 + 0 + 1 + 6) / 6 = 24 / 6 = 4 。
+对值为 5 的节点：子树的平均值 (5 + 6) / 2 = 11 / 2 = 5 。
+对值为 0 的节点：子树的平均值 0 / 1 = 0 。
+对值为 1 的节点：子树的平均值 1 / 1 = 1 。
+对值为 6 的节点：子树的平均值 6 / 1 = 6 。
+</code></pre><button data-clipboard-text="输入：root = [4,8,5,0,1,null,6]
+输出：5
+解释：
+对值为 4 的节点：子树的平均值 (4 + 8 + 5 + 0 + 1 + 6) / 6 = 24 / 6 = 4 。
+对值为 5 的节点：子树的平均值 (5 + 6) / 2 = 11 / 2 = 5 。
+对值为 0 的节点：子树的平均值 0 / 1 = 0 。
+对值为 1 的节点：子树的平均值 1 / 1 = 1 。
+对值为 6 的节点：子树的平均值 6 / 1 = 6 。
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div> <p>示例 2：<br> <div class="el-image"><div class="el-image__placeholder"></div><!----></div></p> <div class="mycodeblock" style="position:relative;"><pre><code>输入：root = [1]
+输出：1
+解释：对值为 1 的节点：子树的平均值 1 / 1 = 1。
+</code></pre><button data-clipboard-text="输入：root = [1]
+输出：1
+解释：对值为 1 的节点：子树的平均值 1 / 1 = 1。
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div> <p>提示：</p> <div class="mycodeblock" style="position:relative;"><pre><code>树中节点数目在范围 [1, 1000] 内
+0 &lt;= Node.val &lt;= 1000
+</code></pre><button data-clipboard-text="树中节点数目在范围 [1, 1000] 内
+0 &lt;= Node.val &lt;= 1000
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div> <h3 id="思路"><a href="#思路" class="header-anchor">#</a> 思路</h3> <p>dfs</p> <div class="mycodeblock" style="position:relative;"><pre><code><span class="hljs-comment">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */</span>
+<span class="hljs-keyword">typedef</span> pair&lt;<span class="hljs-type">int</span>,<span class="hljs-type">int</span>&gt; pii;
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-type">int</span> cnt=<span class="hljs-number">0</span>;
+    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">averageOfSubtree</span><span class="hljs-params">(TreeNode* root)</span> </span>{
+        <span class="hljs-built_in">dfs</span>(root);
+        <span class="hljs-keyword">return</span> cnt;
+    }
+    <span class="hljs-function">pii <span class="hljs-title">dfs</span><span class="hljs-params">(TreeNode *node)</span></span>{
+        <span class="hljs-type">int</span> ans=node-&gt;val;
+        <span class="hljs-type">int</span> num=<span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span>(node-&gt;left){
+            pii a=<span class="hljs-built_in">dfs</span>(node-&gt;left);
+            ans+=a.first;
+            num+=a.second;
+        }
+        <span class="hljs-keyword">if</span>(node-&gt;right){
+            pii a=<span class="hljs-built_in">dfs</span>(node-&gt;right);
+            ans+=a.first;
+            num+=a.second;
+        }
+        <span class="hljs-keyword">if</span>(ans/num==node-&gt;val){
+            cnt++;
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">make_pair</span>(ans,num);
+    }
+};
+</code></pre><button data-clipboard-text="/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+typedef pair&lt;int,int&gt; pii;
+class Solution {
+public:
+    int cnt=0;
+    int averageOfSubtree(TreeNode* root) {
+        dfs(root);
+        return cnt;
+    }
+    pii dfs(TreeNode *node){
+        int ans=node-&gt;val;
+        int num=1;
+        if(node-&gt;left){
+            pii a=dfs(node-&gt;left);
+            ans+=a.first;
+            num+=a.second;
+        }
+        if(node-&gt;right){
+            pii a=dfs(node-&gt;right);
+            ans+=a.first;
+            num+=a.second;
+        }
+        if(ans/num==node-&gt;val){
+            cnt++;
+        }
+        return make_pair(ans,num);
+    }
+};
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div> <h2 id="t3-统计打字方案数"><a href="#t3-统计打字方案数" class="header-anchor">#</a> T3 统计打字方案数</h2> <p>Alice 在给 Bob 用手机打字。数字到字母的 对应 如下图所示。<br>
+为了 打出 一个字母，Alice 需要 按 对应字母 i 次，i 是该字母在这个按键上所处的位置。<br> <div class="el-image"><div class="el-image__placeholder"></div><!----></div><br>
+比方说，为了按出字母 's' ，Alice 需要按 '7' 四次。类似的， Alice 需要按 '5' 两次得到字母  'k' 。<br>
+注意，数字 '0' 和 '1' 不映射到任何字母，所以 Alice 不 使用它们。<br>
+但是，由于传输的错误，Bob 没有收到 Alice 打字的字母信息，反而收到了 按键的字符串信息 。</p> <p>比方说，Alice 发出的信息为 &quot;bob&quot; ，Bob 将收到字符串 &quot;2266622&quot; 。<br>
+给你一个字符串 pressedKeys ，表示 Bob 收到的字符串，请你返回 Alice 总共可能发出多少种文字信息 。</p> <p>由于答案可能很大，将它对 109 + 7 取余 后返回。</p> <p>示例 1：</p> <div class="mycodeblock" style="position:relative;"><pre><code>输入：pressedKeys = &quot;22233&quot;
+输出：8
+解释：
+Alice 可能发出的文字信息包括：
+&quot;aaadd&quot;, &quot;abdd&quot;, &quot;badd&quot;, &quot;cdd&quot;, &quot;aaae&quot;, &quot;abe&quot;, &quot;bae&quot; 和 &quot;ce&quot; 。
+由于总共有 8 种可能的信息，所以我们返回 8 。
+</code></pre><button data-clipboard-text="输入：pressedKeys = &quot;22233&quot;
+输出：8
+解释：
+Alice 可能发出的文字信息包括：
+&quot;aaadd&quot;, &quot;abdd&quot;, &quot;badd&quot;, &quot;cdd&quot;, &quot;aaae&quot;, &quot;abe&quot;, &quot;bae&quot; 和 &quot;ce&quot; 。
+由于总共有 8 种可能的信息，所以我们返回 8 。
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div> <p>示例 2：</p> <div class="mycodeblock" style="position:relative;"><pre><code>输入：pressedKeys = &quot;222222222222222222222222222222222222&quot;
+输出：82876089
+解释：
+总共有 2082876103 种 Alice 可能发出的文字信息。
+由于我们需要将答案对 109 + 7 取余，所以我们返回 2082876103 % (109 + 7) = 82876089 。
+</code></pre><button data-clipboard-text="输入：pressedKeys = &quot;222222222222222222222222222222222222&quot;
+输出：82876089
+解释：
+总共有 2082876103 种 Alice 可能发出的文字信息。
+由于我们需要将答案对 109 + 7 取余，所以我们返回 2082876103 % (109 + 7) = 82876089 。
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div> <p>提示：</p> <div class="mycodeblock" style="position:relative;"><pre><code>1 &lt;= pressedKeys.length &lt;= 105
+pressedKeys 只包含数字 '2' 到 '9' 。
+</code></pre><button data-clipboard-text="1 &lt;= pressedKeys.length &lt;= 105
+pressedKeys 只包含数字 '2' 到 '9' 。
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div> <h3 id="思路-2"><a href="#思路-2" class="header-anchor">#</a> 思路</h3> <p>分组计算(连续相同的字母化为一组)，并根据乘法原则计算最终结果<br>
+尝试记忆化搜索</p> <div class="mycodeblock" style="position:relative;"><pre><code><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">countTexts</span>(<span class="hljs-params">self, pressedKeys: <span class="hljs-built_in">str</span></span>) -&gt; <span class="hljs-built_in">int</span>:
+        mod=<span class="hljs-built_in">int</span>(<span class="hljs-number">1e9</span>+<span class="hljs-number">7</span>)
+<span class="hljs-meta">        @cache</span>
+        <span class="hljs-keyword">def</span> <span class="hljs-title function_">dfs</span>(<span class="hljs-params">i,size,t</span>):
+            <span class="hljs-keyword">if</span> i==size:
+                <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
+            <span class="hljs-keyword">elif</span> i&gt;size:
+                <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+            s=<span class="hljs-number">0</span>
+            <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(i+<span class="hljs-number">1</span>,i+<span class="hljs-number">4</span>+t):
+                s+=dfs(k,size,t)
+            <span class="hljs-keyword">return</span> s
+        s=pressedKeys[<span class="hljs-number">0</span>]
+        pressedKeys+=<span class="hljs-string">'1'</span>
+        cnt=<span class="hljs-number">0</span>
+        ans=<span class="hljs-number">1</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> pressedKeys:
+            <span class="hljs-keyword">if</span> i!=s:
+                t=<span class="hljs-number">0</span>
+                <span class="hljs-keyword">if</span> s==<span class="hljs-string">'7'</span> <span class="hljs-keyword">or</span> s==<span class="hljs-string">'9'</span>:
+                    t=<span class="hljs-number">1</span>
+                ans*=dfs(<span class="hljs-number">0</span>,cnt,t)
+                <span class="hljs-comment">#xxx</span>
+                cnt=<span class="hljs-number">1</span>
+                s=i
+            <span class="hljs-keyword">else</span>:
+                cnt+=<span class="hljs-number">1</span>
+        <span class="hljs-keyword">return</span> ans%mod
+</code></pre><button data-clipboard-text="class Solution:
+    def countTexts(self, pressedKeys: str) -&gt; int:
+        mod=int(1e9+7)
+        @cache
+        def dfs(i,size,t):
+            if i==size:
+                return 1
+            elif i&gt;size:
+                return 0
+            s=0
+            for k in range(i+1,i+4+t):
+                s+=dfs(k,size,t)
+            return s
+        s=pressedKeys[0]
+        pressedKeys+='1'
+        cnt=0
+        ans=1
+        for i in pressedKeys:
+            if i!=s:
+                t=0
+                if s=='7' or s=='9':
+                    t=1
+                ans*=dfs(0,cnt,t)
+                #xxx
+                cnt=1
+                s=i
+            else:
+                cnt+=1
+        return ans%mod
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div> <p>MLE了,改成递推形式+预处理</p> <div class="mycodeblock" style="position:relative;"><pre><code>size=<span class="hljs-number">100009</span>
+a=[<span class="hljs-number">0</span>]*size
+b=[<span class="hljs-number">0</span>]*size
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">100000</span>,-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>):
+    <span class="hljs-keyword">if</span> i==<span class="hljs-number">100000</span>:
+        a[i]=<span class="hljs-number">1</span>
+    <span class="hljs-keyword">else</span>:
+        a[i]=a[i+<span class="hljs-number">1</span>]+a[i+<span class="hljs-number">2</span>]+a[i+<span class="hljs-number">3</span>]
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">100000</span>,-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>):
+    <span class="hljs-keyword">if</span> i==<span class="hljs-number">100000</span>:
+        b[i]=<span class="hljs-number">1</span>
+    <span class="hljs-keyword">else</span>:
+        b[i]=b[i+<span class="hljs-number">1</span>]+b[i+<span class="hljs-number">2</span>]+b[i+<span class="hljs-number">3</span>]+b[i+<span class="hljs-number">4</span>]
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">countTexts</span>(<span class="hljs-params">self, pressedKeys: <span class="hljs-built_in">str</span></span>) -&gt; <span class="hljs-built_in">int</span>:
+        mod=<span class="hljs-built_in">int</span>(<span class="hljs-number">1e9</span>+<span class="hljs-number">7</span>)
+        s=pressedKeys[<span class="hljs-number">0</span>]
+        pressedKeys+=<span class="hljs-string">'1'</span>
+        cnt=<span class="hljs-number">0</span>
+        ans=<span class="hljs-number">1</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> pressedKeys:
+            <span class="hljs-keyword">if</span> i!=s:
+                t=<span class="hljs-number">0</span>
+                <span class="hljs-keyword">if</span> s==<span class="hljs-string">'7'</span> <span class="hljs-keyword">or</span> s==<span class="hljs-string">'9'</span>:
+                    ans*=b[<span class="hljs-number">100000</span>-cnt]
+                <span class="hljs-keyword">else</span>:
+                    ans*=a[<span class="hljs-number">100000</span>-cnt]
+                cnt=<span class="hljs-number">1</span>
+                s=i
+            <span class="hljs-keyword">else</span>:
+                cnt+=<span class="hljs-number">1</span>
+        <span class="hljs-keyword">return</span> ans%mod
+</code></pre><button data-clipboard-text="size=100009
+a=[0]*size
+b=[0]*size
+for i in range(100000,-1,-1):
+    if i==100000:
+        a[i]=1
+    else:
+        a[i]=a[i+1]+a[i+2]+a[i+3]
+for i in range(100000,-1,-1):
+    if i==100000:
+        b[i]=1
+    else:
+        b[i]=b[i+1]+b[i+2]+b[i+3]+b[i+4]
+class Solution:
+    def countTexts(self, pressedKeys: str) -&gt; int:
+        mod=int(1e9+7)
+        s=pressedKeys[0]
+        pressedKeys+='1'
+        cnt=0
+        ans=1
+        for i in pressedKeys:
+            if i!=s:
+                t=0
+                if s=='7' or s=='9':
+                    ans*=b[100000-cnt]
+                else:
+                    ans*=a[100000-cnt]
+                cnt=1
+                s=i
+            else:
+                cnt+=1
+        return ans%mod
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div> <p>b中的数会很大很大，占据内存大 ,所以MLE了<br>
+加入分步取模AC</p> <h3 id="ac-code"><a href="#ac-code" class="header-anchor">#</a> AC code</h3> <div class="mycodeblock" style="position:relative;"><pre><code>size=<span class="hljs-number">10</span>**<span class="hljs-number">5</span>
+mod=<span class="hljs-built_in">int</span>(<span class="hljs-number">1e9</span>+<span class="hljs-number">7</span>)
+a=[<span class="hljs-number">0</span>]*(size+<span class="hljs-number">4</span>)
+b=[<span class="hljs-number">0</span>]*(size+<span class="hljs-number">5</span>)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(size,-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>):
+    <span class="hljs-keyword">if</span> i==size:
+        a[i]=<span class="hljs-number">1</span>
+    <span class="hljs-keyword">else</span>:
+        a[i]=(a[i+<span class="hljs-number">1</span>]+a[i+<span class="hljs-number">2</span>]+a[i+<span class="hljs-number">3</span>])%mod
+        a[i]%=mod
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(size,-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>):
+    <span class="hljs-keyword">if</span> i==size:
+        b[i]=<span class="hljs-number">1</span>
+    <span class="hljs-keyword">else</span>:
+        b[i]=(b[i+<span class="hljs-number">1</span>]+b[i+<span class="hljs-number">2</span>]+b[i+<span class="hljs-number">3</span>]+b[i+<span class="hljs-number">4</span>])%mod
+        b[i]%=mod
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">countTexts</span>(<span class="hljs-params">self, pressedKeys: <span class="hljs-built_in">str</span></span>) -&gt; <span class="hljs-built_in">int</span>:
+        s=pressedKeys[<span class="hljs-number">0</span>]
+        pressedKeys+=<span class="hljs-string">'1'</span>
+        cnt=<span class="hljs-number">0</span>
+        ans=<span class="hljs-number">1</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> pressedKeys:
+            <span class="hljs-keyword">if</span> i!=s:
+                t=<span class="hljs-number">0</span>
+                <span class="hljs-keyword">if</span> s==<span class="hljs-string">'7'</span> <span class="hljs-keyword">or</span> s==<span class="hljs-string">'9'</span>:
+                    ans*=b[size-cnt]
+                <span class="hljs-keyword">else</span>:
+                    ans*=a[size-cnt]
+                cnt=<span class="hljs-number">1</span>
+                s=i
+            <span class="hljs-keyword">else</span>:
+                cnt+=<span class="hljs-number">1</span>
+        <span class="hljs-keyword">return</span> ans%mod
+</code></pre><button data-clipboard-text="size=10**5
+mod=int(1e9+7)
+a=[0]*(size+4)
+b=[0]*(size+5)
+for i in range(size,-1,-1):
+    if i==size:
+        a[i]=1
+    else:
+        a[i]=(a[i+1]+a[i+2]+a[i+3])%mod
+        a[i]%=mod
+for i in range(size,-1,-1):
+    if i==size:
+        b[i]=1
+    else:
+        b[i]=(b[i+1]+b[i+2]+b[i+3]+b[i+4])%mod
+        b[i]%=mod
+class Solution:
+    def countTexts(self, pressedKeys: str) -&gt; int:
+        s=pressedKeys[0]
+        pressedKeys+='1'
+        cnt=0
+        ans=1
+        for i in pressedKeys:
+            if i!=s:
+                t=0
+                if s=='7' or s=='9':
+                    ans*=b[size-cnt]
+                else:
+                    ans*=a[size-cnt]
+                cnt=1
+                s=i
+            else:
+                cnt+=1
+        return ans%mod
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div> <h2 id="t4-检查是否有合法括号字符串路径"><a href="#t4-检查是否有合法括号字符串路径" class="header-anchor">#</a> T4 检查是否有合法括号字符串路径</h2> <p>一个括号字符串是一个 非空 且只包含 '(' 和 ')' 的字符串。如果下面 任意 条件为 真 ，那么这个括号字符串就是 合法的 。</p> <p>字符串是 () 。<br>
+字符串可以表示为 AB（A 连接 B），A 和 B 都是合法括号序列。<br>
+字符串可以表示为 (A) ，其中 A 是合法括号序列。<br>
+给你一个 m x n 的括号网格图矩阵 grid 。网格图中一个 合法括号路径 是满足以下所有条件的一条路径：</p> <p>路径开始于左上角格子 (0, 0) 。<br>
+路径结束于右下角格子 (m - 1, n - 1) 。<br>
+路径每次只会向 下 或者向 右 移动。<br>
+路径经过的格子组成的括号字符串是 合法 的。<br>
+如果网格图中存在一条 合法括号路径 ，请返回 true ，否则返回 false 。</p> <p>示例 1：<br> <div class="el-image"><div class="el-image__placeholder"></div><!----></div><br> <div class="el-image"><div class="el-image__placeholder"></div><!----></div></p> <div class="mycodeblock" style="position:relative;"><pre><code>输入：grid = [[&quot;(&quot;,&quot;(&quot;,&quot;(&quot;],[&quot;)&quot;,&quot;(&quot;,&quot;)&quot;],[&quot;(&quot;,&quot;(&quot;,&quot;)&quot;],[&quot;(&quot;,&quot;(&quot;,&quot;)&quot;]]
+输出：true
+解释：上图展示了两条路径，它们都是合法括号字符串路径。
+第一条路径得到的合法字符串是 &quot;()(())&quot; 。
+第二条路径得到的合法字符串是 &quot;((()))&quot; 。
+注意可能有其他的合法括号字符串路径。
+</code></pre><button data-clipboard-text="输入：grid = [[&quot;(&quot;,&quot;(&quot;,&quot;(&quot;],[&quot;)&quot;,&quot;(&quot;,&quot;)&quot;],[&quot;(&quot;,&quot;(&quot;,&quot;)&quot;],[&quot;(&quot;,&quot;(&quot;,&quot;)&quot;]]
+输出：true
+解释：上图展示了两条路径，它们都是合法括号字符串路径。
+第一条路径得到的合法字符串是 &quot;()(())&quot; 。
+第二条路径得到的合法字符串是 &quot;((()))&quot; 。
+注意可能有其他的合法括号字符串路径。
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div> <p>示例 2：</p> <p><div class="el-image"><div class="el-image__placeholder"></div><!----></div></p> <div class="mycodeblock" style="position:relative;"><pre><code>输入：grid = [[&quot;)&quot;,&quot;)&quot;],[&quot;(&quot;,&quot;(&quot;]]
+输出：false
+解释：两条可行路径分别得到 &quot;))(&quot; 和 &quot;)((&quot; 。由于它们都不是合法括号字符串，我们返回 false 。
+</code></pre><button data-clipboard-text="输入：grid = [[&quot;)&quot;,&quot;)&quot;],[&quot;(&quot;,&quot;(&quot;]]
+输出：false
+解释：两条可行路径分别得到 &quot;))(&quot; 和 &quot;)((&quot; 。由于它们都不是合法括号字符串，我们返回 false 。
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div> <p>提示：</p> <div class="mycodeblock" style="position:relative;"><pre><code>m == grid.length
+n == grid[i].length
+1 &lt;= m, n &lt;= 100
+grid[i][j] 要么是 '(' ，要么是 ')' 。
+</code></pre><button data-clipboard-text="m == grid.length
+n == grid[i].length
+1 &lt;= m, n &lt;= 100
+grid[i][j] 要么是 '(' ，要么是 ')' 。
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div> <h3 id="思路-3"><a href="#思路-3" class="header-anchor">#</a> 思路</h3> <p>dp，用数值模拟括号而非栈</p> <div class="mycodeblock" style="position:relative;"><pre><code><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:
+    <span class="hljs-function">def <span class="hljs-title">hasValidPath</span><span class="hljs-params">(self, grid: List[List[str]])</span> -&gt; <span class="hljs-type">bool</span>:
+        @cache
+        def dfs(i,j,s):
+            # print(i,j,s)
+            if i&gt;=</span><span class="hljs-built_in">len</span>(grid)<span class="hljs-number">-1</span> <span class="hljs-keyword">and</span> j&gt;=<span class="hljs-built_in">len</span>(grid[<span class="hljs-number">0</span>])<span class="hljs-number">-1</span>:
+                <span class="hljs-meta"># print(s)</span>
+                <span class="hljs-keyword">return</span> s==<span class="hljs-number">0</span>
+            a=False
+            <span class="hljs-keyword">if</span> j&lt;<span class="hljs-built_in">len</span>(grid[<span class="hljs-number">0</span>])<span class="hljs-number">-1</span>:
+                <span class="hljs-keyword">if</span> grid[i][j+<span class="hljs-number">1</span>]==<span class="hljs-string">')'</span> <span class="hljs-keyword">and</span> s&gt;<span class="hljs-number">0</span>:
+                    a|= <span class="hljs-built_in">dfs</span>(i,j+<span class="hljs-number">1</span>,s<span class="hljs-number">-1</span>)
+                elif grid[i][j+<span class="hljs-number">1</span>]==<span class="hljs-string">'('</span>:
+                    a|= <span class="hljs-built_in">dfs</span>(i,j+<span class="hljs-number">1</span>,s+<span class="hljs-number">1</span>)
+            <span class="hljs-keyword">if</span> i&lt;<span class="hljs-built_in">len</span>(grid)<span class="hljs-number">-1</span>:
+                <span class="hljs-keyword">if</span> grid[i+<span class="hljs-number">1</span>][j]==<span class="hljs-string">')'</span> <span class="hljs-keyword">and</span> s&gt;<span class="hljs-number">0</span>:
+                    a|= <span class="hljs-built_in">dfs</span>(i+<span class="hljs-number">1</span>,j,s<span class="hljs-number">-1</span>)
+                elif grid[i+<span class="hljs-number">1</span>][j]==<span class="hljs-string">'('</span>:
+                    a|= <span class="hljs-built_in">dfs</span>(i+<span class="hljs-number">1</span>,j,s+<span class="hljs-number">1</span>)
+            <span class="hljs-keyword">return</span> a
+        <span class="hljs-keyword">if</span> grid[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]!=<span class="hljs-string">'('</span>:
+            <span class="hljs-keyword">return</span> False
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">dfs</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)
+</code></pre><button data-clipboard-text="class Solution:
+    def hasValidPath(self, grid: List[List[str]]) -&gt; bool:
+        @cache
+        def dfs(i,j,s):
+            # print(i,j,s)
+            if i&gt;=len(grid)-1 and j&gt;=len(grid[0])-1:
+                # print(s)
+                return s==0
+            a=False
+            if j&lt;len(grid[0])-1:
+                if grid[i][j+1]==')' and s&gt;0:
+                    a|= dfs(i,j+1,s-1)
+                elif grid[i][j+1]=='(':
+                    a|= dfs(i,j+1,s+1)
+            if i&lt;len(grid)-1:
+                if grid[i+1][j]==')' and s&gt;0:
+                    a|= dfs(i+1,j,s-1)
+                elif grid[i+1][j]=='(':
+                    a|= dfs(i+1,j,s+1)
+            return a
+        if grid[0][0]!='(':
+            return False
+        return dfs(0,0,1)
+" class="code-copy-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"></path></svg></button></div> <h2 id="一点也不相关的视频"><a href="#一点也不相关的视频" class="header-anchor">#</a> 一点也不相关的视频</h2> <div><iframe width="560" height="351" src="https://player.bilibili.com/player.html?bvid=BV19u4y1D7GT&amp;autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="allowfullscreen"></iframe></div></div></div></div> <div><div class="el-card box-card is-always-shadow" data-v-5436757e><div class="el-card__header"><div class="clearfix" data-v-5436757e><span data-v-5436757e>目录</span></div></div><div class="el-card__body"> <div class="overflow-y card-body" data-v-5436757e><div class="text item" data-v-5436757e><a href="#前言" class="title-color active-link" style="padding-left:0rem;" data-v-5436757e>
+          前言
+        </a></div><div class="text item" data-v-5436757e><a href="#t1-字符串中最大的-3-位相同数字" class="title-color" style="padding-left:0rem;" data-v-5436757e>
+          T1 字符串中最大的 3 位相同数字
+        </a></div><div class="text item" data-v-5436757e><a href="#t2-统计值等于子树平均值的节点数" class="title-color" style="padding-left:0rem;" data-v-5436757e>
+          T2 统计值等于子树平均值的节点数
+        </a></div><div class="text item" data-v-5436757e><a href="#思路" class="notitle-color" style="padding-left:1.25rem;" data-v-5436757e>
+          思路
+        </a></div><div class="text item" data-v-5436757e><a href="#t3-统计打字方案数" class="title-color" style="padding-left:0rem;" data-v-5436757e>
+          T3 统计打字方案数
+        </a></div><div class="text item" data-v-5436757e><a href="#思路-2" class="notitle-color" style="padding-left:1.25rem;" data-v-5436757e>
+          思路
+        </a></div><div class="text item" data-v-5436757e><a href="#ac-code" class="notitle-color" style="padding-left:1.25rem;" data-v-5436757e>
+          AC code
+        </a></div><div class="text item" data-v-5436757e><a href="#t4-检查是否有合法括号字符串路径" class="title-color" style="padding-left:0rem;" data-v-5436757e>
+          T4 检查是否有合法括号字符串路径
+        </a></div><div class="text item" data-v-5436757e><a href="#思路-3" class="notitle-color" style="padding-left:1.25rem;" data-v-5436757e>
+          思路
+        </a></div><div class="text item" data-v-5436757e><a href="#一点也不相关的视频" class="title-color" style="padding-left:0rem;" data-v-5436757e>
+          一点也不相关的视频
+        </a></div></div></div></div></div></div></div><div class="global-ui"></div></div>
+    <script src="/ebook/assets/js/app.d67de612.js" defer></script><script src="/ebook/assets/js/3.8854c265.js" defer></script><script src="/ebook/assets/js/5.91f704ab.js" defer></script>
+  </body>
+</html>
