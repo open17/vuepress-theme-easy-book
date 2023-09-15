@@ -99,7 +99,7 @@ root 的 子树 由 root 和它的所有后代组成。
  
 
 示例 1：
-!![img](https://assets.leetcode.com/uploads/2022/03/15/image-20220315203925-1.png)
+<!-- !![img](https://assets.leetcode.com/uploads/2022/03/15/image-20220315203925-1.png) -->
 ```
 输入：root = [4,8,5,0,1,null,6]
 输出：5
@@ -111,7 +111,7 @@ root 的 子树 由 root 和它的所有后代组成。
 对值为 6 的节点：子树的平均值 6 / 1 = 6 。
 ```
 示例 2：
-!![img2](https://assets.leetcode.com/uploads/2022/03/26/image-20220326133920-1.png)
+<!-- !![img2](https://assets.leetcode.com/uploads/2022/03/26/image-20220326133920-1.png) -->
 ```
 输入：root = [1]
 输出：1
@@ -168,7 +168,7 @@ public:
 ## T3 统计打字方案数 
 Alice 在给 Bob 用手机打字。数字到字母的 对应 如下图所示。            
 为了 打出 一个字母，Alice 需要 按 对应字母 i 次，i 是该字母在这个按键上所处的位置。          
-!![pic](https://assets.leetcode.com/uploads/2022/03/15/1200px-telephone-keypad2svg.png)
+<!-- !![pic](https://assets.leetcode.com/uploads/2022/03/15/1200px-telephone-keypad2svg.png) -->
 比方说，为了按出字母 's' ，Alice 需要按 '7' 四次。类似的， Alice 需要按 '5' 两次得到字母  'k' 。          
 注意，数字 '0' 和 '1' 不映射到任何字母，所以 Alice 不 使用它们。            
 但是，由于传输的错误，Bob 没有收到 Alice 打字的字母信息，反而收到了 按键的字符串信息 。               
@@ -328,8 +328,8 @@ class Solution:
  
 
 示例 1：
-!![1](https://assets.leetcode.com/uploads/2022/03/15/example1drawio.png)
-!![1](https://assets.leetcode.com/uploads/2022/03/15/example1drawio.png)
+<!-- !![1](https://assets.leetcode.com/uploads/2022/03/15/example1drawio.png)
+!![1](https://assets.leetcode.com/uploads/2022/03/15/example1drawio.png) -->
 
 ```
 输入：grid = [["(","(","("],[")","(",")"],["(","(",")"],["(","(",")"]]
@@ -382,5 +382,3 @@ class Solution:
             return False
         return dfs(0,0,1)
 ```
-## 一点也不相关的视频
-<IVideo w="560" h="351" bv="BV19u4y1D7GT" />

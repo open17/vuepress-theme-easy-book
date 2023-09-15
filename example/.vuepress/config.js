@@ -4,7 +4,7 @@ module.exports = {
   theme: path.resolve(__dirname, '../../'),
   // Fill in the webpage title in title
   title: 'Easy-Book',
-  base: "/vuepress-theme-easy-book/",
+  // base: "/vuepress-theme-easy-book/",
   markdown: {
     extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6']
   },
