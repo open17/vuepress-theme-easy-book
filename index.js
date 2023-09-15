@@ -7,11 +7,11 @@ module.exports = (options, ctx) => {
         config.resolve.alias.set('core-js/library/fn', 'core-js/features');
       },
       plugins: [
-        ['fulltext-search'],
         ['pad-markdown'],
+        ['fulltext-search'],
         ['markdown-todolist'],
-        ['el-img'],
-        ['el-tab']
+        ['el-img']
+        // ['el-tab']
       ],
     };
   };

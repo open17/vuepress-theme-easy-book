@@ -8536,11 +8536,6 @@ vuepress-plugin-el-img@^1.0.0:
   resolved "https://registry.yarnpkg.com/vuepress-plugin-el-img/-/vuepress-plugin-el-img-1.0.0.tgz#94cdc9dcb0ffb4ca6318aeaf4346769fece458c8"
   integrity sha512-o2ZEWC/Q5aqHLgpJURBWx0DJa2mbipFpIN0zyRO+ZPOUrGkoPmxTQYBOOLG5Nb0FhxOZl7osSzORw79b+Z6UXw==
 
-vuepress-plugin-el-tab@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-el-tab/-/vuepress-plugin-el-tab-1.0.1.tgz#ddcc8ffbd12e836da174a364829228e20fd19d19"
-  integrity sha512-Khq/clgdooGGQQfXSvrEhc3mWbEKVYPqMTQ/WuWPSq8CWWQ3R40MtNz1+K9A0tDTUIrl+lGuvX36+5ZWCwqpvw==
-
 vuepress-plugin-fulltext-search@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-fulltext-search/-/vuepress-plugin-fulltext-search-2.2.1.tgz#f73cddfec3b878aa83b89559e8985be1e1cc50de"
