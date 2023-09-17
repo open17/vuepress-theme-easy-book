@@ -12,6 +12,7 @@
             'min-w-65': isCollapse == 'y',
           }"
         />
+          <!-- <tab-pane-vue/> -->
       </el-card>
       <div><RightTocVue :headers="PageHeader" /></div>
     </div>
@@ -23,11 +24,14 @@ import "../styles/basic.css";
 import LeftNavVue from "../compentents/LeftNav.vue";
 import RightTocVue from "../compentents/RightToc.vue";
 import TopBarVue from "../compentents/TopBar.vue";
+// import TabPaneVue from '../compentents/TabPane.vue';
+
 export default {
   components: {
     RightTocVue,
     TopBarVue,
     LeftNavVue,
+    // TabPaneVue
   },
   data() {
     return {

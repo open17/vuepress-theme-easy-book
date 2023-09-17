@@ -7,7 +7,7 @@
       :collapse-transition="false"
     >
       <!-- 章节 -->
-      <el-submenu v-if="subgroup">
+      <el-submenu v-if="subgroup" index="parts">
         <template slot="title">
           <i class="el-icon-menu"></i>
           <span>章节</span>
@@ -102,7 +102,7 @@ export default {
       if (link.endsWith(".html")) {
         link= link.replace(/\.html$/, ".md");
       } else {
-        link= "/README.md";
+        link+= "README.md";
       }
       window.open(this.editurl + link, "_blank");
     },

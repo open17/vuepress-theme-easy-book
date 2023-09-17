@@ -23,7 +23,7 @@
         >
       </el-checkbox-group>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="settingFormVisible = false;optsGroup=['atom-one-light','atom-one-dark']">恢复默认</el-button>
+        <el-button @click="settingFormVisible = false;optsGroup=['atom-one-light','atom-one-dark'];applySetting()">恢复默认</el-button>
         <el-button type="primary" @click="settingFormVisible = false;applySetting()"
           >应用</el-button
         >

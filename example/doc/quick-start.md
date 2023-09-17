@@ -2,12 +2,31 @@
 ## 前置环境
 - [Node.js 10+](https://nodejs.org/en)
 
+@tab
+
+<[a]
+
+1111111111111
+
+
+<()>
+
+<[b]
+
+1111111111111
+
+
+<()>
+
+@tab
+
+
 ## 安装
 ### 自动安装
 ### 手动安装
 > 如果要在已有的项目安装,请从第三步开始
 1. 创建一个项目文件夹并切换到该文件夹,把easy-book替换为你想要的项目名
-    ```cmd
+    ```
     mkdir myeasy-book
     cd easy-book
     ```
@@ -60,7 +79,7 @@
 
 
 4. 创建你的第一篇文档
-    ```cmd
+    ```
     mkdir docs && echo '# easy-book' > docs/README.md
     ```
 5. 配置主题
