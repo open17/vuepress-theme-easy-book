@@ -104,6 +104,12 @@
   .max-w-70{
     max-width: 70vw;
   }
+  .w-66{
+    width: 66vw;
+  }
+  .w-56{
+    width: 56vw;
+  }
   .h-full{
     height: 100%;
   }

@@ -8,8 +8,8 @@
           class="markdown-body"
           ref="scrollContainer"
           :class="{
-            'min-w-55 max-w-60': isCollapse == 'n',
-            'min-w-65 max-w-70': isCollapse == 'y',
+            'w-56': isCollapse == 'n',
+            'w-66': isCollapse == 'y',
           }"
         />
       </el-card>
