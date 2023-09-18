@@ -90,13 +90,19 @@
     text-decoration: none;
   }
   a:hover {
-    color: #1e80ff;
+    color: #4389e6;
   }
   .min-w-55 {
     min-width: 55vw;
   }
   .min-w-65 {
     min-width: 65vw;
+  }
+  .max-w-60{
+    max-width: 60vw;
+  }
+  .max-w-70{
+    max-width: 70vw;
   }
   .h-full{
     height: 100%;

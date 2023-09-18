@@ -8,11 +8,10 @@
           class="markdown-body"
           ref="scrollContainer"
           :class="{
-            'min-w-55': isCollapse == 'n',
-            'min-w-65': isCollapse == 'y',
+            'min-w-55 max-w-60': isCollapse == 'n',
+            'min-w-65 max-w-70': isCollapse == 'y',
           }"
         />
-          <!-- <tab-pane-vue/> -->
       </el-card>
       <div><RightTocVue :headers="PageHeader" /></div>
     </div>

@@ -175,7 +175,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .search input {
   background: none;
   padding-left: 5vw;

@@ -10,8 +10,8 @@ module.exports = (options, ctx) => {
         ['pad-markdown'],
         ['fulltext-search'],
         ['markdown-todolist'],
-        ['el-img']
-        // ['el-tab']
+        ['el-img'],
+        ['el-tab']
       ],
     };
   };
