@@ -11,7 +11,7 @@ module.exports = (options, ctx) => {
         ['fulltext-search'],
         ['markdown-todolist'],
         ['el-img'],
-        ['el-tab']
+        ['el-tab'],
       ],
     };
   };

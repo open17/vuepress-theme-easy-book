@@ -7,7 +7,7 @@
       direction="ttb"
       size="75%"
     >
-      <div class="search">
+      <div class="vuepress-theme-search">
         <SearchBox />
       </div>
     </el-drawer>
@@ -175,8 +175,8 @@ export default {
 };
 </script>
 
-<style scoped>
-.search input {
+<style>
+.vuepress-theme-search input {
   background: none;
   padding-left: 5vw;
   position: absolute;
@@ -186,7 +186,7 @@ export default {
   height: 5vh;
   border: solid 1px #7b838b;
 }
-.search input:focus {
+.vuepress-theme-search input:focus {
   padding-left: 5vw;
   position: absolute;
   left: 5vw;
@@ -195,7 +195,7 @@ export default {
   height: 5vh;
   border: solid 1px #409eff;
 }
-.search ul {
+.vuepress-theme-search ul {
   position: absolute !important;
   left: 10vw !important;
   right: 10vw !important;
@@ -203,7 +203,7 @@ export default {
   margin-top: 2vh;
   border: none !important;
 }
-.search li {
+.vuepress-theme-search li {
   width: 80vw !important;
 }
 header {
