@@ -2,26 +2,88 @@
   <div class="LeftNav" :style="styles">
     <el-menu
       :collapse="isCollapse"
-      default-active="span"
+      default-active="parts"
       :router="false"
       :collapse-transition="false"
     >
       <!-- 章节 -->
-      <el-submenu v-if="subgroup" index="parts">
+      <!-- 这里代码记得优化!!!!! -->
+      <el-submenu v-if="realgroup" index="parts">
         <template slot="title">
           <i class="el-icon-menu"></i>
           <span>章节</span>
         </template>
-        <el-menu-item
-          v-for="(item, index) in subgroup"
-          :key="index"
-          :index="item.link"
-          class="flex"
-        >
-          <router-link :to="GetRealLink(item.link)" class="black h-full w-full">
-            {{ item.text }}
-          </router-link>
-        </el-menu-item>
+        <template v-for="(item, index) in realgroup">
+          <!-- 含分组 -->
+          <el-menu-item-group
+            v-if="item.subgroup"
+            :key="index"
+            :title="item.text"
+          >
+            <template v-for="(ig, igdx) in item.subgroup">
+              <el-menu-item
+                v-if="ig.link"
+                :key="igdx"
+                :index="ig.link"
+                class="flex"
+              >
+                <router-link
+                  :to="GetRealLink(ig.link)"
+                  class="black h-full w-full"
+                >
+                  {{ ig.text }}
+                </router-link>
+              </el-menu-item>
+              <el-submenu :key="ig" v-if="ig.sublink" :index="ig.text">
+                <template slot="title">{{ ig.text }}</template>
+                <el-menu-item
+                  v-for="(i, idx) in ig.sublink"
+                  :key="idx"
+                  class="flex"
+                  :index="i.link"
+                >
+                  <router-link
+                    :to="GetRealLink(i.link)"
+                    class="black h-full w-full"
+                  >
+                    {{ i.text }}
+                  </router-link>
+                </el-menu-item>
+              </el-submenu>
+            </template>
+          </el-menu-item-group>
+          <!-- 基础menu -->
+          <el-menu-item
+            v-if="item.link"
+            :key="index"
+            :index="item.link"
+            class="flex"
+          >
+            <router-link
+              :to="GetRealLink(item.link)"
+              class="black h-full w-full"
+            >
+              {{ item.text }}
+            </router-link>
+          </el-menu-item>
+          <!-- 含submenu的menu -->
+          <el-submenu :key="index" v-if="item.sublink" :index="item.text">
+            <template slot="title">{{ item.text }}</template>
+            <el-menu-item
+              v-for="(i, idx) in item.sublink"
+              :key="idx"
+              class="flex"
+              :index="i.link"
+            >
+              <router-link
+                :to="GetRealLink(i.link)"
+                class="black h-full w-full"
+              >
+                {{ i.text }}
+              </router-link>
+            </el-menu-item>
+          </el-submenu>
+        </template>
       </el-submenu>
       <!-- 编辑 -->
       <el-menu-item index="edit" @click="openUrl()" v-if="editurl">
@@ -29,15 +91,15 @@
         <span slot="title">编辑</span>
       </el-menu-item>
       <!-- 分享 -->
-      <el-menu-item index="share">
+      <!-- <el-menu-item index="share">
         <i class="el-icon-share"></i>
         <span slot="title">分享</span>
-      </el-menu-item>
+      </el-menu-item> -->
       <!-- 书签 -->
-      <el-menu-item index="mark">
+      <!-- <el-menu-item index="mark">
         <i class="el-icon-s-management"></i>
         <span slot="title">书签</span>
-      </el-menu-item>
+      </el-menu-item> -->
       <!-- 留言墙 -->
       <el-menu-item index="comment">
         <el-badge value="new" v-if="isCollapse && isNew">
@@ -78,7 +140,7 @@ export default {
       value: 20,
       ifspan: false,
       styles: "width: 15vw;",
-      subgroup: null,
+      realgroup: null,
       editurl: null,
       isNew: false,
     };
@@ -86,23 +148,23 @@ export default {
   mounted() {
     if (this.$themeConfig.editurl) this.editurl = this.$themeConfig.editurl;
     this.$EventBus.$on("activeIndex", (data) => {
-      this.subgroup = null;
+      this.realgroup = null;
       if (this.$themeConfig.group) {
         var group = this.$themeConfig.group;
         if (group[data]) {
-          this.subgroup = group[data];
-          // console.log(this.subgroup);
+          this.realgroup = group[data];
+          // console.log(this.realgroup);
         }
       }
     });
   },
   methods: {
     openUrl(url) {
-      var link=this.$page.path
+      var link = this.$page.path;
       if (link.endsWith(".html")) {
-        link= link.replace(/\.html$/, ".md");
+        link = link.replace(/\.html$/, ".md");
       } else {
-        link+= "README.md";
+        link += "README.md";
       }
       window.open(this.editurl + link, "_blank");
     },
