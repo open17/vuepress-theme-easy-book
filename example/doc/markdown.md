@@ -4,17 +4,23 @@
 
 ## 折叠面板
 ```markdown
-<edetails title="折叠面板">
-这里是内容<br>
-内容<br>
-内容<br>
+<edetails title="折叠面板1">
+这里是内容
 </edetails>
+<details>
+<summary>折叠面板2</summary>
+这里是内容
+</details>
 ```
-<edetails title="折叠面板">
-这里是内容<br>
-内容<br>
-内容<br>
+<edetails title="折叠面板1">
+这里是内容
 </edetails>
+
+
+<details>
+<summary>折叠面板2</summary>
+这里是内容
+</details>
 
 ## 视频嵌入
 
@@ -86,9 +92,12 @@
 
 
 ## 选项卡
+- `@tab`开始`@@tab`结束
+- `<[xxx]>`到`<()>`为一项,xxx为选项名
+- 注意选项卡开始时应和上面内容间隔一个空行
+
+
 @tab
-
-
 
 <[python]
 

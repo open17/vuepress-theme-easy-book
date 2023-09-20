@@ -34,7 +34,7 @@
                   {{ ig.text }}
                 </router-link>
               </el-menu-item>
-              <el-submenu :key="ig" v-if="ig.sublink" :index="ig.text">
+              <el-submenu :key="igdx" v-if="ig.sublink" :index="ig.text">
                 <template slot="title">{{ ig.text }}</template>
                 <el-menu-item
                   v-for="(i, idx) in ig.sublink"
@@ -147,7 +147,16 @@ export default {
   },
   mounted() {
     if (this.$themeConfig.editurl) this.editurl = this.$themeConfig.editurl;
+    
+    var str=this.$page['relativePath'];
+    this.updategroup(str.substring(0, str.indexOf("/")));
+
     this.$EventBus.$on("activeIndex", (data) => {
+        this.updategroup(data);
+    });
+  },
+  methods: {
+    updategroup(data){
       this.realgroup = null;
       if (this.$themeConfig.group) {
         var group = this.$themeConfig.group;
@@ -156,9 +165,7 @@ export default {
           // console.log(this.realgroup);
         }
       }
-    });
-  },
-  methods: {
+    },
     openUrl(url) {
       var link = this.$page.path;
       if (link.endsWith(".html")) {

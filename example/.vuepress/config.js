@@ -8,6 +8,19 @@ module.exports = {
   markdown: {
     extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6']
   },
+  head: [
+    [
+      'script',
+      {},
+      `var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?521f6f39625b7ea5ffbfe19f2d223139";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();`
+    ]
+  ],
   themeConfig: {
     nav: [
       { text: '展示', link: '' },
@@ -30,7 +43,7 @@ module.exports = {
           subgroup: [
             { text: '快速开始', link: 'doc/quick-start' },
             { text: '配置', link: 'doc/config' },
-            { text: 'Markdown', link: 'doc/markdown' }
+            { text: 'Markdown增强', link: 'doc/markdown' }
           ]
         },
         {

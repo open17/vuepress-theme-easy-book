@@ -145,6 +145,9 @@ export default {
   },
   mounted() {
     if (this.$themeConfig.nav) this.nav = this.$themeConfig.nav;
+    var str=this.$page['relativePath'];
+    // console.log(str,str.substring(0, str.indexOf("/")));
+    this.activeIndex=str.substring(0, str.indexOf("/"));
   },
   methods: {
     applySetting(){
@@ -166,6 +169,7 @@ export default {
     },
     handleSelect(key, keyPath) {
       this.activeIndex = keyPath[0];
+      console.log(this.activeIndex);
       this.$EventBus.$emit("activeIndex", this.activeIndex);
     },
     GetRealLink(link) {
