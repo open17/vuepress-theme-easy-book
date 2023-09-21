@@ -1,15 +1,16 @@
 <template>
   <div class="overflow-x-hidden">
-    <TopBarVue />
+    <TopBarVue/>
     <div class="flex justify-end space-x-10 main-body">
-      <div><LeftNavVue /></div>
+      <div><LeftNavVue :isShow="!isMobile"/></div>
       <el-card class="box-card overflow-y">
         <Content
           class="markdown-body"
           ref="scrollContainer"
           :class="{
-            'w-56': isCollapse == 'n',
-            'w-66': isCollapse == 'y',
+            'w-56': isCollapse == 'n'&&!isMobile,
+            'w-66': isCollapse == 'y'&&!isMobile,
+            'w-75': isMobile
           }"
         />
       </el-card>
@@ -42,6 +43,10 @@ export default {
     PageHeader() {
       return this.$page.headers;
     },
+    isMobile() {
+      // console.log(window.matchMedia("(max-width: 768px)").matches)
+      return window.matchMedia("(max-width: 768px)").matches;
+    },
   },
   mounted() {
     this.$EventBus.$on("backtotop", (backtotop) => {
@@ -68,4 +73,17 @@ export default {
 </script>
 
 <style>
+  .main-body {
+    position: absolute;
+    bottom: 0vh;
+    top: 20vh;
+  }
+  @media (max-width: 768px) {
+  /* 小于等于 768px 宽度时的样式 */
+  .main-body {
+    /* 移动设备样式 */
+    /* 添加移动设备特定的样式属性 */
+    top: 10vh;
+  }
+}
 </style>

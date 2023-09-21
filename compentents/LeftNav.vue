@@ -1,5 +1,5 @@
 <template>
-  <div class="LeftNav" :style="styles">
+  <div class="LeftNav" :style="styles" v-if="isShow">
     <el-menu
       :collapse="isCollapse"
       default-active="parts"
@@ -114,7 +114,7 @@
         <span slot="title">回到顶部</span>
       </el-menu-item>
       <!-- 折叠 -->
-      <el-menu-item @click="Collapse()" v-if="!ifspan" index="span">
+      <el-menu-item @click="Collapse()" v-if="ifspan" index="span">
         <i
           :class="{
             'el-icon-arrow-right': isCollapse,
@@ -131,6 +131,7 @@
 
 <script>
 export default {
+  props:["isShow"],
   data() {
     return {
       styles: "background-color: #fff",
@@ -147,15 +148,21 @@ export default {
   },
   mounted() {
     if (this.$themeConfig.editurl) this.editurl = this.$themeConfig.editurl;
-    
     var str=this.$page['relativePath'];
     this.updategroup(str.substring(0, str.indexOf("/")));
-
-    this.$EventBus.$on("activeIndex", (data) => {
-        this.updategroup(data);
-    });
+    this.$watch('$page.relativePath', this.handleRelativePathChange);
+    // this.$EventBus.$on("activeIndex", (data) => {
+    //     this.updategroup(data);
+    // });
+    this.isMobile= window.matchMedia("(max-width: 768px)").matches; 
+    if(this.isMobile)this.styles = "width: 80vw;"; 
+    this.ifspan=!this.isMobile;
   },
   methods: {
+    handleRelativePathChange(newValue, oldValue) {
+      // 值发生变化时执行的操作
+      this.updategroup(newValue.substring(0, newValue.indexOf("/")));
+    },
     updategroup(data){
       this.realgroup = null;
       if (this.$themeConfig.group) {
@@ -179,6 +186,7 @@ export default {
       this.isCollapse = !this.isCollapse;
       if (!this.isCollapse) {
         this.styles = "width: 15vw;";
+        if(this.isMobile)this.styles = "width: 80vw;";  
         this.$EventBus.$emit("isCollapse", "n");
       } else {
         this.$EventBus.$emit("isCollapse", "y");
@@ -199,12 +207,25 @@ export default {
 ::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
-.LeftNav {
+
+@media  (min-width: 768px){
+  .LeftNav {
   height: 70vh;
   overflow-x: hidden;
   overflow-y: auto;
   scrollbar-width: none;
   -moz-scrollbars-none: none;
   scrollbar-color: transparent transparent;
+}
+}
+  @media (max-width: 768px) {
+  /* 小于等于 768px 宽度时的样式 */
+.LeftNav {
+    overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -moz-scrollbars-none: none;
+  scrollbar-color: transparent transparent;
+}
 }
 </style>

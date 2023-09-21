@@ -67,11 +67,7 @@
   .overflow-x {
     overflow-x: scroll;
   }
-  .main-body {
-    position: absolute;
-    bottom: 0vh;
-    top: 20vh;
-  }
+
   /* WebKit 内核浏览器样式化 */
   ::-webkit-scrollbar {
     width: 6px; /* 滚动条宽度 */
@@ -88,8 +84,9 @@
   }
   a {
     text-decoration: none;
+    color: gray;
   }
-  a:hover {
+  a:hover,a:active {
     color: #4389e6;
   }
   .min-w-55 {
@@ -116,9 +113,13 @@
   .w-full{
     width: 100%;
   }
+  .w-75{
+    width: 75vw;
+  }
 
-
-
+.h-2screen{
+  height: 200vh;
+}
 
 
 

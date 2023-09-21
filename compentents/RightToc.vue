@@ -1,5 +1,5 @@
 <template>
-  <el-card class="box-card">
+  <el-card class="box-card" v-if="!isMobile">
     <div slot="header" class="clearfix">
       <span>目录</span>
     </div>
@@ -38,6 +38,12 @@ export default {
     return {
       activeIdx: 0,
     };
+  },
+    computed: {
+    isMobile() {
+      // console.log(window.matchMedia("(max-width: 768px)").matches)
+      return window.matchMedia("(max-width: 768px)").matches;
+    },
   },
 };
 </script>

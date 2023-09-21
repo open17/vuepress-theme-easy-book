@@ -23,8 +23,20 @@
         >
       </el-checkbox-group>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="settingFormVisible = false;optsGroup=['atom-one-light','atom-one-dark'];applySetting()">恢复默认</el-button>
-        <el-button type="primary" @click="settingFormVisible = false;applySetting()"
+        <el-button
+          @click="
+            settingFormVisible = false;
+            optsGroup = ['atom-one-light', 'atom-one-dark'];
+            applySetting();
+          "
+          >恢复默认</el-button
+        >
+        <el-button
+          type="primary"
+          @click="
+            settingFormVisible = false;
+            applySetting();
+          "
           >应用</el-button
         >
       </div>
@@ -34,8 +46,8 @@
       <div class="flex justify-between items-center">
         <!-- 标题 -->
         <div class="items-center flex justify-start space-x-10">
-          <i class="el-icon-guide text-xl"></i>
-          <h2 class="">{{this.$site.title}}</h2>
+          <i class="el-icon-guide text-xl" @click="ClickMobileNav()" v-show="isMobile"></i>
+          <h2 class="">{{ this.$site.title }}</h2>
         </div>
         <!-- 图标 -->
         <div class="items-center space-x-10">
@@ -108,6 +120,7 @@
         :default-active="activeIndex"
         :router="false"
         @select="handleSelect"
+        v-if="!isMobile"
       >
         <el-menu-item
           v-for="(item, index) in nav"
@@ -121,17 +134,55 @@
         </el-menu-item>
       </el-menu>
     </header>
+    <!-- 移动端侧边栏 -->
+    <el-drawer
+      title="目录"
+      :visible.sync="showMobileNav"
+      direction="ltr"
+      size="80%"
+      class=""
+    >
+        <el-menu
+          :default-active="activeIndex"
+          :router="false"
+          @select="handleSelect"
+          class="child"
+        >
+          <el-submenu index="1">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>导航</span>
+            </template>
+
+            <el-menu-item
+              v-for="(item, index) in nav"
+              :key="index"
+              :index="item.link"
+              class="flex items-center"
+            >
+              <router-link :to="GetRealLink(item.link)" class="h-full w-full">
+                {{ item.text }}
+              </router-link>
+            </el-menu-item>
+          </el-submenu>
+        </el-menu>
+        <LeftNavVue :isShow="true" class="child"/>
+    </el-drawer>
   </div>
 </template>
 
 <script>
 import SearchBox from "@SearchBox";
+import LeftNavVue from "./LeftNav.vue";
 export default {
   components: {
     SearchBox,
+    LeftNavVue,
   },
   data() {
     return {
+      isClickMobileNav: false,
+      showMobileNav: false,
       isShowSearch: false,
       drawer: false,
       isDark: false,
@@ -139,25 +190,33 @@ export default {
       activeIndex: "/",
       settingFormVisible: false,
       // 高亮选择
-      options: ["atom-one-light","atom-one-dark","github","github-dark","monokai","tokyo-night-dark","tokyo-night-light"],
-      optsGroup:["atom-one-light","atom-one-dark"]
+      options: [
+        "atom-one-light",
+        "atom-one-dark",
+        "github",
+        "github-dark",
+        "monokai",
+        "tokyo-night-dark",
+        "tokyo-night-light",
+      ],
+      optsGroup: ["atom-one-light", "atom-one-dark"],
     };
   },
   mounted() {
     if (this.$themeConfig.nav) this.nav = this.$themeConfig.nav;
-    var str=this.$page['relativePath'];
+    var str = this.$page["relativePath"];
     // console.log(str,str.substring(0, str.indexOf("/")));
-    this.activeIndex=str.substring(0, str.indexOf("/"));
+    this.activeIndex = str.substring(0, str.indexOf("/"));
   },
   methods: {
-    applySetting(){
+    applySetting() {
       this.$notify({
-          title: '设置',
-          message: '已应用新的设置',
-          type: 'success',
-          offset: 70,
-        });
-        this.$EventBus.$emit("load-css", this.optsGroup);
+        title: "设置",
+        message: "已应用新的设置",
+        type: "success",
+        offset: 70,
+      });
+      this.$EventBus.$emit("load-css", this.optsGroup);
     },
     notFinish() {
       this.$notify({
@@ -168,12 +227,22 @@ export default {
       });
     },
     handleSelect(key, keyPath) {
-      this.activeIndex = keyPath[0];
-      console.log(this.activeIndex);
-      this.$EventBus.$emit("activeIndex", this.activeIndex);
+      // this.activeIndex = keyPath[0];
+      // console.log(this.activeIndex);
+      // this.$EventBus.$emit("activeIndex", this.activeIndex);
     },
     GetRealLink(link) {
       return "/" + link;
+    },
+    ClickMobileNav() {
+      this.isClickMobileNav = !this.isClickMobileNav;
+      this.showMobileNav = this.isClickMobileNav && this.isMobile;
+    },
+  },
+  computed: {
+    isMobile() {
+      // console.log(window.matchMedia("(max-width: 768px)").matches)
+      return window.matchMedia("(max-width: 768px)").matches;
     },
   },
 };
