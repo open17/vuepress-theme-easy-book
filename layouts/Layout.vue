@@ -1,6 +1,6 @@
 <template>
   <div class="overflow-x-hidden">
-    <TopBarVue />
+    <TopBarVue :isMobile="isMobile"/>
     <div class="flex justify-end space-x-10 main-body">
       <div><LeftNavVue :isShow="!isMobile" /></div>
       <el-card class="box-card overflow-y">
@@ -14,7 +14,7 @@
           }"
         />
       </el-card>
-      <div><RightTocVue :headers="PageHeader" /></div>
+      <div><RightTocVue :headers="PageHeader" :isMobile="isMobile"/></div>
     </div>
   </div>
 </template>
@@ -36,21 +36,28 @@ export default {
   data() {
     return {
       isCollapse: "n",
+      isMobile: false,
     };
   },
-  methods: {},
+  methods: {
+    checkMobile() {
+      this.isMobile = window.matchMedia("(max-width: 768px)").matches;
+    },
+  },
+  created() {
+   
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.checkMobile);
+  },
   computed: {
     PageHeader() {
       return this.$page.headers;
     },
-  isMobile() {
-    if (typeof window !== 'undefined' && window.matchMedia) {
-      return window.matchMedia("(max-width: 768px)").matches;
-    }
-    return false; // 在非浏览器环境下，返回一个默认值
-  }
-},
+  },
   mounted() {
+     this.checkMobile();
+    window.addEventListener("resize", this.checkMobile);
     this.$EventBus.$on("backtotop", (backtotop) => {
       this.$nextTick(() => {
         const container = this.$refs.scrollContainer.$el;
