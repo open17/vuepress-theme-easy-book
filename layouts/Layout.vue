@@ -43,13 +43,13 @@ export default {
     PageHeader() {
       return this.$page.headers;
     },
-    isMobile() {
-      if (process.client) {
-        return window.matchMedia("(max-width: 768px)").matches;
-      }
-      return false; // 在非浏览器环境下，返回一个默认值
-    },
-  },
+  isMobile() {
+    if (typeof window !== 'undefined' && window.matchMedia) {
+      return window.matchMedia("(max-width: 768px)").matches;
+    }
+    return false; // 在非浏览器环境下，返回一个默认值
+  }
+},
   mounted() {
     this.$EventBus.$on("backtotop", (backtotop) => {
       this.$nextTick(() => {

@@ -241,7 +241,7 @@ export default {
   },
 computed: {
   isMobile() {
-    if (process.client) {
+    if (typeof window !== 'undefined' && window.matchMedia) {
       return window.matchMedia("(max-width: 768px)").matches;
     }
     return false; // 在非浏览器环境下，返回一个默认值
