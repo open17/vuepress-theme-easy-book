@@ -1,20 +1,24 @@
 <template>
   <div class="overflow-x-hidden">
     <TopBarVue :isMobile="isMobile"/>
-    <div class="flex justify-end space-x-10 main-body">
+    <div class="flex justify-end space-x-10 main-body" v-if="!isMobile">
       <div><LeftNavVue :isShow="!isMobile" /></div>
       <el-card class="box-card overflow-y">
         <Content
           class="markdown-body"
           ref="scrollContainer"
           :class="{
-            'w-56': isCollapse == 'n' && !isMobile,
-            'w-66': isCollapse == 'y' && !isMobile,
-            'w-75': isMobile,
+            'w-56': isCollapse == 'n',
+            'w-66': isCollapse == 'y',
           }"
         />
       </el-card>
       <div><RightTocVue :headers="PageHeader" :isMobile="isMobile"/></div>
+    </div>
+    <div v-else>
+      <Content
+          class="markdown-body w-screen main-body"
+          ref="scrollContainer"/>
     </div>
   </div>
 </template>
