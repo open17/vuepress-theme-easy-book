@@ -5,10 +5,13 @@
       default-active="parts"
       :router="false"
       :collapse-transition="false"
+      :text-color="isdark ? '#fff':'#303133'"
+      :active-text-color="isdark ? '#ffd04b':'#409EFF'"
+      :background-color="isdark ? '#0d1117':'#ffffff'"
     >
       <!-- 章节 -->
       <!-- 这里代码记得优化!!!!! -->
-      <el-submenu v-if="realgroup" index="parts">
+      <el-submenu v-if="realgroup" index="parts" >
         <template slot="title">
           <i class="el-icon-menu"></i>
           <span>章节</span>
@@ -131,7 +134,7 @@
 
 <script>
 export default {
-  props:["isShow"],
+  props:["isShow","isdark"],
   data() {
     return {
       styles: "background-color: #fff",
@@ -227,5 +230,25 @@ export default {
   -moz-scrollbars-none: none;
   scrollbar-color: transparent transparent;
 }
+}
+.dark .LeftNav,.dark .el-menu,.dark .el-menu-item,.dark .el-menu-item-group,.dark .el-submenu{
+  background-color: #0d1117;
+  color: #fff;
+}
+.dark .el-submenu__title{
+  color: #fff !important; 
+}
+.dark .is-active{
+  color: gold !important;
+}
+.dark .el-menu-item a{
+  color: #fff;
+}
+.dark .el-menu-item:active,.dark .el-menu-item:focus{
+  background-color: #2b2f36 !important;
+}
+.dark .el-menu-item:hover,.dark .el-submenu__title:focus,.dark .el-submenu__title:hover{
+  background-color: #2b2f36 !important;
+  color: gold !important;
 }
 </style>

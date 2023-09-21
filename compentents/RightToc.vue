@@ -35,7 +35,7 @@ export default {
     },
     isMobile:{
       type: Boolean,
-    }
+    },
   },
   data() {
     return {
@@ -48,18 +48,31 @@ computed: {
 </script>
 
 <style scoped>
+.dark .box-card{
+  color: #fff;
+}
 ::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
-
+.dark .notitle-color,.dark .notitle-color:after{
+  color: #c3c1c1;
+}
 .notitle-color:after,
 .notitle-color {
   color: #2a2a2a;
+}
+.dark .title-color:after,
+.dark .title-color{
+  color: #fff;
 }
 .title-color:after,
 .title-color {
   color: #1a242f;
   font-size: 15px;
+}
+.dark .active-link:after,
+.dark .active-link{
+  color: gold;
 }
 .active-link:after,
 .active-link {

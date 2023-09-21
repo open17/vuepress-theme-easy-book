@@ -46,8 +46,8 @@
       <div class="flex justify-between items-center">
         <!-- 标题 -->
         <div class="items-center flex justify-start space-x-10">
-          <i class="el-icon-guide text-xl" @click="ClickMobileNav()" v-show="isMobile"></i>
-          <h2 class="">{{ this.$site.title }}</h2>
+          <i class="el-icon-guide text-xl site-title" @click="ClickMobileNav()" v-show="isMobile"></i>
+          <h2 class="site-title">{{ this.$site.title }}</h2>
         </div>
         <!-- 图标 -->
         <div class="items-center space-x-10">
@@ -147,6 +147,10 @@
           :router="false"
           @select="handleSelect"
           class="child"
+          style="width:80vw"
+          :text-color="isdark ? '#fff':'#303133'"
+          :active-text-color="isdark ? '#ffd04b':'#409EFF'"
+          :background-color="isdark ? '#0d1117':'#ffffff'"
         >
           <el-submenu index="1">
             <template slot="title">
@@ -166,7 +170,7 @@
             </el-menu-item>
           </el-submenu>
         </el-menu>
-        <LeftNavVue :isShow="true" class="child"/>
+        <LeftNavVue :isShow="true" :isdark="isdark"/>
     </el-drawer>
   </div>
 </template>
@@ -175,7 +179,7 @@
 import SearchBox from "@SearchBox";
 import LeftNavVue from "./LeftNav.vue";
 export default {
-  props:['isMobile'],
+  props:['isMobile','isdark'],
   components: {
     SearchBox,
     LeftNavVue,
@@ -279,5 +283,29 @@ computed: {
 header {
   background-color: #fff;
   height: 20vh;
+}
+.dark header{
+  background-color: #0d1117;
+}
+.dark .LeftNav,.dark .el-menu,.dark .el-menu-item,.dark .el-menu-item-group,.dark .el-submenu{
+  background-color: #0d1117;
+  color: #fff;
+}
+.dark .site-title{
+  color: #fff;
+}
+.dark .el-menu--horizontal .is-active{
+  color: gold !important;
+  border-bottom: 2px solid gold !important;
+}
+.dark .el-menu-item:active,.dark .el-menu-item:focus{
+  background-color: #0d1117 !important;
+}
+.dark .el-menu-item:hover{
+  background-color: #0d1117 !important;
+  color: gold !important;
+}
+.dark .el-drawer{
+  background-color: #0d1117;
 }
 </style>

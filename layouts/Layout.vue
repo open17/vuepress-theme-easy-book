@@ -1,8 +1,8 @@
 <template>
-  <div class="overflow-x-hidden">
-    <TopBarVue :isMobile="isMobile"/>
-    <div class="flex justify-end space-x-10 main-body" v-if="!isMobile">
-      <div><LeftNavVue :isShow="!isMobile" /></div>
+  <div class="overflow-x-hidden" :class="{'dark':isDarkMode}">
+    <TopBarVue :isMobile="isMobile" :isdark="isDarkMode"/>
+    <div class="flex justify-end space-x-10 main-body" v-if="!isMobile" >
+      <div><LeftNavVue :isShow="!isMobile" :isdark="isDarkMode"/></div>
       <el-card class="box-card overflow-y">
         <Content
           class="markdown-body"
@@ -13,12 +13,13 @@
           }"
         />
       </el-card>
-      <div><RightTocVue :headers="PageHeader" :isMobile="isMobile"/></div>
+      <div><RightTocVue :headers="PageHeader" :isMobile="isMobile" /></div>
     </div>
     <div v-else>
-      <Content
-          class="markdown-body w-screen main-body"
-          ref="scrollContainer"/>
+      <div class="main-body overflow-y pl-10 pr-10 w-screen">
+        <Content class="markdown-body w-85" ref="scrollContainer" />
+        <div class="h-5"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -39,6 +40,7 @@ export default {
   },
   data() {
     return {
+      isDarkMode: false,
       isCollapse: "n",
       isMobile: false,
     };
@@ -47,12 +49,25 @@ export default {
     checkMobile() {
       this.isMobile = window.matchMedia("(max-width: 768px)").matches;
     },
+    handleThemeChange(event) {
+      // 更新数据
+      this.isDarkMode = event.matches;
+      console.log(document.body.classList);
+      if(this.isDarkMode){
+        document.body.classList.add('dark');
+      }
+      else{
+        document.body.classList.remove('dark');
+      }
+      // console.log(this.isDarkMode);
+    },
   },
-  created() {
-   
-  },
+  created() {},
   beforeDestroy() {
     window.removeEventListener("resize", this.checkMobile);
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .removeEventListener("change", this.handleThemeChange);
   },
   computed: {
     PageHeader() {
@@ -60,8 +75,19 @@ export default {
     },
   },
   mounted() {
-     this.checkMobile();
+    this.checkMobile();
     window.addEventListener("resize", this.checkMobile);
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", this.handleThemeChange);
+    // 初始化系统主题
+    this.isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if(this.isDarkMode){
+        document.body.classList.add('dark');
+      }
+      else{
+        document.body.classList.remove('dark');
+      }
     this.$EventBus.$on("backtotop", (backtotop) => {
       this.$nextTick(() => {
         const container = this.$refs.scrollContainer.$el;
@@ -96,7 +122,11 @@ export default {
   .main-body {
     /* 移动设备样式 */
     /* 添加移动设备特定的样式属性 */
-    top: 10vh;
+    top: 12vh;
   }
+}
+.dark .main-body,.dark .el-card{
+  background-color: #0d1117;
+  color: aliceblue;
 }
 </style>
