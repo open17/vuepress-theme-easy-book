@@ -39,12 +39,14 @@ export default {
       activeIdx: 0,
     };
   },
-    computed: {
-    isMobile() {
-      // console.log(window.matchMedia("(max-width: 768px)").matches)
+computed: {
+  isMobile() {
+    if (process.client) {
       return window.matchMedia("(max-width: 768px)").matches;
-    },
-  },
+    }
+    return false; // 在非浏览器环境下，返回一个默认值
+  }
+}
 };
 </script>
 
