@@ -23,7 +23,7 @@ module.exports = {
   ],
   themeConfig: {
     nav: [
-      { text: '展示', link: '' },
+      { text: '首页', link: '' },
       { text: '关于', link: 'about' },
       { text: '文档', link: 'doc' },
       { text: '问题', link: 'question' },
@@ -87,5 +87,20 @@ module.exports = {
       ]
     },
     editurl: 'https://github.com/open17/vuepress-theme-easy-book/blob/master/example',
+        HighlightOptions:[
+        "atom-one-light",
+        "atom-one-dark",
+        "github",
+        "github-dark",
+        "monokai",
+        "tokyo-night-dark",
+        "tokyo-night-light",
+        "stackoverflow-dark",
+        "stackoverflow-light",
+        "tomorrow-night-blue",
+        "tomorrow-night-bright",
+      ],
+    defaultHighlight:["stackoverflow-dark","stackoverflow-light",],
+    limitHighlight: 5,
   }
 }

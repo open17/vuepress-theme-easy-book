@@ -1,5 +1,5 @@
 # Vuepress-theme-easy-book
-A flat theme for Vuepress site 
+一个明/暗主题的Vuepress 1.x 主题
 
 <p align="center">
 <a href="#"><img src="https://img.shields.io/npm/dt/vuepress-theme-easy-book.svg" alt="Downloads"></a>
@@ -7,37 +7,34 @@ A flat theme for Vuepress site
   <a href="https://github.com/vuejs/vuepress-theme-easy-book/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/vuepress-theme-easy-book.svg" alt="License"></a>
 </p>
 
-<div align="center">
+<!-- <div align="center">
   <a href="https://github.com/open17/vuepress-theme-easy-book/blob/master/README.md"><span>English</span></a>|中文
-</div>
+</div> -->
 
-
-
-## 示例
+## 示例与文档
 [文档](https://open17.github.io/vuepress-theme-easy-book/)
 
 ## 功能
-### 导航栏
-- 全文搜索区域
-- 代码高亮动态设置
-### 左工具栏
-- 编辑功能
-- 回到顶部功能
-- 折叠展开工具栏
-### 主体
-- 代码复制功能增强(hover显示+成功提示)
-- 代码块高亮动态切换
-- 视频
-- 荧光笔
-- 选项卡
-- 图片放大旋转
-- 支持多文档目录
-- 支持多文档导航栏
-### 右目录
-- 目录功能
-- 空值处理
-### 其他
-- 信息提示增强
-- 滚动条美化
-- 404页面
+- 支持在线切换多种代码高亮(atom-one,github,monokai,tokyo-night等)
+- 本地全文内容搜索
+- 移动端网页端适配
+- 支持明暗双模式
+- Markdown增强:视频插入,选项卡,图片增强,荧光笔,代码复制...
+- 工具栏: 一键编辑,回到顶部,章节,工具栏折叠...
+- 其他功能: h1-h6目录,章节分组,多文件目录,自定义导航栏...
+- 持续维护中
+  
+## 快速开始
+### 安装
+```shell
+npm i vuepress-theme-easy-book -D
+```
+### 配置
+```js
+// .vuepress/config.js
+module.exports = {
+    //使用本主题
+    theme: 'easy-book',
+}
+```
 

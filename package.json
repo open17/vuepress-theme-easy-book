@@ -15,7 +15,7 @@
     "vuepress-plugin-el-tab": "^1.0.1",
     "vuepress-plugin-fulltext-search": "^2.2.1",
     "vuepress-plugin-markdown-todolist": "^1.0.1",
-    "vuepress-plugin-pad-markdown": "1.1.0"
+    "vuepress-plugin-pad-markdown": "^1.1.2"
   },
   "devDependencies": {
     "vuepress": "1.9.9"

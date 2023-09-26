@@ -1,8 +1,8 @@
 <template>
-  <div class="overflow-x-hidden" :class="{'dark':isDarkMode}">
-    <TopBarVue :isMobile="isMobile" :isdark="isDarkMode"/>
-    <div class="flex justify-end space-x-10 main-body" v-if="!isMobile" >
-      <div><LeftNavVue :isShow="!isMobile" :isdark="isDarkMode"/></div>
+  <div class="overflow-x-hidden" :class="{ dark: isDarkMode }">
+    <TopBarVue :isMobile="isMobile" :isdark="isDarkMode" />
+    <div class="flex justify-end space-x-10 main-body" v-if="!isMobile">
+      <div><LeftNavVue :isShow="!isMobile" :isdark="isDarkMode" /></div>
       <el-card class="box-card overflow-y">
         <Content
           class="markdown-body"
@@ -41,6 +41,7 @@ export default {
   data() {
     return {
       isDarkMode: false,
+      isSetMode: "auto",
       isCollapse: "n",
       isMobile: false,
     };
@@ -53,14 +54,21 @@ export default {
       // 更新数据
       this.isDarkMode = event.matches;
       console.log(document.body.classList);
-      if(this.isDarkMode){
-        document.body.classList.add('dark');
-      }
-      else{
-        document.body.classList.remove('dark');
+      if (this.isDarkMode) {
+        document.body.classList.add("dark");
+      } else {
+        document.body.classList.remove("dark");
       }
       // console.log(this.isDarkMode);
     },
+    initTheme(){
+      if(this.isSetMode=="auto")this.isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (this.isDarkMode) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+    }
   },
   created() {},
   beforeDestroy() {
@@ -81,13 +89,7 @@ export default {
       .matchMedia("(prefers-color-scheme: dark)")
       .addEventListener("change", this.handleThemeChange);
     // 初始化系统主题
-    this.isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        if(this.isDarkMode){
-        document.body.classList.add('dark');
-      }
-      else{
-        document.body.classList.remove('dark');
-      }
+    this.initTheme()
     this.$EventBus.$on("backtotop", (backtotop) => {
       this.$nextTick(() => {
         const container = this.$refs.scrollContainer.$el;
@@ -99,6 +101,11 @@ export default {
     });
     this.$EventBus.$on("isCollapse", (data) => {
       this.isCollapse = data;
+    });
+    this.$EventBus.$on("toggleDarkMode", (data) => {
+      if(data!="auto")this.isDarkMode=(data=="dark");
+      this.isSetMode = data;
+      this.initTheme()
     });
     this.$EventBus.$on("clipboard-success", (data) => {
       this.$message({
@@ -125,8 +132,36 @@ export default {
     top: 12vh;
   }
 }
-.dark .main-body,.dark .el-card{
+.dark .main-body,
+.dark .el-card {
   background-color: #0d1117;
   color: aliceblue;
+}
+
+.dark .el-tabs__item {
+  color: aliceblue;
+}
+.dark .el-tabs__item.is-active,
+.dark .el-tabs__item:hover{
+  color: goldenrod;
+}
+.dark .el-tabs__active-bar{
+  background-color: goldenrod;
+}
+.dark .markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #161b22;
+  border-radius: 6px;
+}
+.markdown-body pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: rgb(246, 248, 250);
+    border-radius: 6px;
 }
 </style>

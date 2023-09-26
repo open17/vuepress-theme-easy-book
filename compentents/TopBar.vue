@@ -13,15 +13,30 @@
     </el-drawer>
     <!-- 设置栏 -->
     <el-dialog title="设置" :visible.sync="settingFormVisible" width="80%">
-      <p>请选择加载的代码高亮:</p>
-      <el-checkbox-group v-model="optsGroup" size="small">
+      <p>请选择/搜索代码高亮主题(最多{{ limitHighlight }}个):</p>
+      <el-select
+        v-model="optsGroup"
+        filterable
+        multiple
+        placeholder="请选择/搜索"
+        :multiple-limit="limitHighlight"
+      >
+        <el-option
+          v-for="(opt, index) in options"
+          :label="opt"
+          :key="index"
+          :value="opt"
+        >
+        </el-option>
+      </el-select>
+      <!-- <el-checkbox-group v-model="optsGroup" size="small">
         <el-checkbox-button
           v-for="(opt, index) in options"
           :label="opt"
           :key="index"
           >{{ opt }}</el-checkbox-button
         >
-      </el-checkbox-group>
+      </el-checkbox-group> -->
       <div slot="footer" class="dialog-footer">
         <el-button
           @click="
@@ -46,7 +61,11 @@
       <div class="flex justify-between items-center">
         <!-- 标题 -->
         <div class="items-center flex justify-start space-x-10">
-          <i class="el-icon-guide text-xl site-title" @click="ClickMobileNav()" v-show="isMobile"></i>
+          <i
+            class="el-icon-guide text-xl site-title"
+            @click="ClickMobileNav()"
+            v-show="isMobile"
+          ></i>
           <h2 class="site-title">{{ this.$site.title }}</h2>
         </div>
         <!-- 图标 -->
@@ -75,13 +94,11 @@
             <a
               class="hover-color text-xl"
               :class="{
-                'el-icon-sunrise-1': !isDark,
-                'el-icon-moon-night': isDark,
+                'el-icon-sunny': toggleDarkMode=='light',
+                'el-icon-moon': toggleDarkMode=='dark',
+                'el-icon-cloudy-and-sunny': toggleDarkMode=='auto',
               }"
-              @click="
-                isDark = !isDark;
-                notFinish();
-              "
+              @click="toggleMode()"
               slot="reference"
             ></a>
           </el-popover>
@@ -142,35 +159,35 @@
       size="80%"
       class=""
     >
-        <el-menu
-          :default-active="activeIndex"
-          :router="false"
-          @select="handleSelect"
-          class="child"
-          style="width:80vw"
-          :text-color="isdark ? '#fff':'#303133'"
-          :active-text-color="isdark ? '#ffd04b':'#409EFF'"
-          :background-color="isdark ? '#0d1117':'#ffffff'"
-        >
-          <el-submenu index="1">
-            <template slot="title">
-              <i class="el-icon-location"></i>
-              <span>导航</span>
-            </template>
+      <el-menu
+        :default-active="activeIndex"
+        :router="false"
+        @select="handleSelect"
+        class="child"
+        style="width: 80vw"
+        :text-color="isdark ? '#fff' : '#303133'"
+        :active-text-color="isdark ? '#ffd04b' : '#409EFF'"
+        :background-color="isdark ? '#0d1117' : '#ffffff'"
+      >
+        <el-submenu index="1">
+          <template slot="title">
+            <i class="el-icon-location"></i>
+            <span>导航</span>
+          </template>
 
-            <el-menu-item
-              v-for="(item, index) in nav"
-              :key="index"
-              :index="item.link"
-              class="flex items-center"
-            >
-              <router-link :to="GetRealLink(item.link)" class="h-full w-full">
-                {{ item.text }}
-              </router-link>
-            </el-menu-item>
-          </el-submenu>
-        </el-menu>
-        <LeftNavVue :isShow="true" :isdark="isdark"/>
+          <el-menu-item
+            v-for="(item, index) in nav"
+            :key="index"
+            :index="item.link"
+            class="flex items-center"
+          >
+            <router-link :to="GetRealLink(item.link)" class="h-full w-full">
+              {{ item.text }}
+            </router-link>
+          </el-menu-item>
+        </el-submenu>
+      </el-menu>
+      <LeftNavVue :isShow="true" :isdark="isdark" />
     </el-drawer>
   </div>
 </template>
@@ -179,18 +196,19 @@
 import SearchBox from "@SearchBox";
 import LeftNavVue from "./LeftNav.vue";
 export default {
-  props:['isMobile','isdark'],
+  props: ["isMobile", "isdark"],
   components: {
     SearchBox,
     LeftNavVue,
   },
   data() {
     return {
+      limitHighlight: 5,
       isClickMobileNav: false,
       showMobileNav: false,
       isShowSearch: false,
       drawer: false,
-      isDark: false,
+      toggleDarkMode:'auto',
       nav: [{ text: "首页", link: "" }],
       activeIndex: "/",
       settingFormVisible: false,
@@ -203,6 +221,20 @@ export default {
         "monokai",
         "tokyo-night-dark",
         "tokyo-night-light",
+        "pojoaque",
+        "sunburst",
+        "vs",
+        "panda-syntax-dark",
+        "panda-syntax-light",
+        "googlecode",
+        "night-owl",
+        "mono-blue",
+        "school-book",
+        "stackoverflow-dark",
+        "stackoverflow-light",
+        "tomorrow-night-blue",
+        "tomorrow-night-bright",
+        "rainbow",
       ],
       optsGroup: ["atom-one-light", "atom-one-dark"],
     };
@@ -212,8 +244,24 @@ export default {
     var str = this.$page["relativePath"];
     // console.log(str,str.substring(0, str.indexOf("/")));
     this.activeIndex = str.substring(0, str.indexOf("/"));
+
+    // 代码高亮切换设置
+    if(this.$themeConfig.HighlightOptions)this.options=this.$themeConfig.HighlightOptions;
+    if(this.$themeConfig.defaultHighlight)this.optsGroup=this.$themeConfig.defaultHighlight;
+    if(this.$themeConfig.limitHighlight)this.limitHighlight=this.$themeConfig.limitHighlight;
   },
   methods: {
+    toggleMode(){
+      if(this.toggleDarkMode=='dark'){
+        this.toggleDarkMode='light';
+      }else if(this.toggleDarkMode=='light'){
+        this.toggleDarkMode='auto';
+      }
+      else{
+        this.toggleDarkMode='dark';
+      }
+      this.$EventBus.$emit("toggleDarkMode", this.toggleDarkMode);
+    },
     applySetting() {
       this.$notify({
         title: "设置",
@@ -244,8 +292,7 @@ export default {
       this.showMobileNav = this.isClickMobileNav && this.isMobile;
     },
   },
-computed: {
-}
+  computed: {},
 };
 </script>
 
@@ -267,45 +314,52 @@ computed: {
   right: 10vw;
   width: 80vw;
   height: 5vh;
-  border: solid 1px #409eff;
+  border: solid 3px #67a7e7;
 }
+
 .vuepress-theme-search ul {
   position: absolute !important;
   left: 10vw !important;
-  right: 10vw !important;
-  margin: 0;
-  margin-top: 2vh;
-  border: none !important;
+  margin: 0 !important;
+  margin-top: 3vh !important;
+  display: flex !important;
+  flex-direction: column;
+  border: 5px solid #409eff !important;
 }
 .vuepress-theme-search li {
-  width: 80vw !important;
+  background-color: #fff !important;
 }
 header {
   background-color: #fff;
   height: 20vh;
 }
-.dark header{
+.dark header {
   background-color: #0d1117;
 }
-.dark .LeftNav,.dark .el-menu,.dark .el-menu-item,.dark .el-menu-item-group,.dark .el-submenu{
+.dark .LeftNav,
+.dark .el-menu,
+.dark .el-menu-item,
+.dark .el-menu-item-group,
+.dark .el-submenu {
   background-color: #0d1117;
   color: #fff;
 }
-.dark .site-title{
+.dark .site-title {
   color: #fff;
 }
-.dark .el-menu--horizontal .is-active{
+.dark .el-menu--horizontal .is-active {
   color: gold !important;
   border-bottom: 2px solid gold !important;
 }
-.dark .el-menu-item:active,.dark .el-menu-item:focus{
+.dark .el-menu-item:active,
+.dark .el-menu-item:focus {
   background-color: #0d1117 !important;
 }
-.dark .el-menu-item:hover{
+.dark .el-menu-item:hover {
   background-color: #0d1117 !important;
   color: gold !important;
 }
-.dark .el-drawer{
+.dark .el-drawer {
   background-color: #0d1117;
 }
 </style>

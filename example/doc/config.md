@@ -86,7 +86,46 @@ group:{
   ]
 },
 ```
+### 代码高亮相关配置
+你可以通过
+- themeConfig.HighlightOptions来配置代码高亮主题选项,
+- themeConfig.defaultHighlight来配置默认应用的代码高亮主题
+- themeConfig.limitHightlight来配置最多同时应用的代码高亮主题数量
+- 代码高亮主题名请与highlight.js@11.8.0一致
+```js
+// 下面是默认配置
+themeConfig: {
+    HighlightOptions:[
+        "atom-one-light",
+        "atom-one-dark",
+        "github",
+        "github-dark",
+        "monokai",
+        "tokyo-night-dark",
+        "tokyo-night-light",
+        "pojoaque",
+        "sunburst",
+        "vs",
+        "panda-syntax-dark",
+        "panda-syntax-light",
+        "googlecode",
+        "night-owl",
+        "mono-blue",
+        "school-book",
+        "stackoverflow-dark",
+        "stackoverflow-light",
+        "tomorrow-night-blue",
+        "tomorrow-night-bright",
+        "rainbow",
+      ],
+    defaultHighlight:["atom-one-light", "atom-one-dark"],
+    limitHightlight:5
+}
 
+```
+### 编辑
+你可以通过themeConfig.editLinkText来配置编辑按钮的链接(注意编辑按钮是基于git的)
+例如本网站:`editurl: 'https://github.com/open17/vuepress-theme-easy-book/blob/master/example'`
 ## 其他常用配置
 ## 示例
 ### 示例一
