@@ -1,11 +1,22 @@
-# Vuepress-theme-easy-book
-一个明/暗主题的Vuepress 1.x 主题
-
-<p align="center">
-<a href="#"><img src="https://img.shields.io/npm/dt/vuepress-theme-easy-book.svg" alt="Downloads"></a>
-  <a href="https://www.npmjs.com/package/vuepress-theme-easy-book"><img src="https://img.shields.io/npm/v/vuepress-theme-easy-book.svg" alt="Version"></a>
-  <a href="https://github.com/vuejs/vuepress-theme-easy-book/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/vuepress-theme-easy-book.svg" alt="License"></a>
-</p>
+<div align="center">
+    <h1 href=" open17.github.io/vuepress-theme-qbook/" align="center">Easy Book</h1>
+    <p align="center">< 一个明亮/黑暗风格的vuepress 1.x 主题 ></p>
+    <p align="center">
+        <img src="https://img.shields.io/npm/dt/vuepress-theme-easy-book.svg?color=red&style=flat-square">
+        <a href="https://www.npmjs.com/package/vuepress-theme-easy-book"><img src="https://img.shields.io/npm/v/vuepress-theme-easy-book.svg?style=flat-square" alt="Version"></a>
+        <a href="https://github.com/open17/vuepress-theme-qbook/issues/new/choose" target="_blank">
+            <img src="https://img.shields.io/static/v1?label=feedback&message=issues&color=orange&style=flat-square">
+        </a>
+        <a href="https://github.com/vuejs/vuepress-theme-easy-book/blob/master/LICENSE" target="_blank">
+            <img src="https://img.shields.io/npm/l/vuepress-theme-easy-book.svg?style=flat-square">
+        </a>
+    </p>
+    </br>
+</div>
+```shell
+npm i vuepress-theme-easy-book -D
+```
+****
 
 <!-- <div align="center">
   <a href="https://github.com/open17/vuepress-theme-easy-book/blob/master/README.md"><span>English</span></a>|中文

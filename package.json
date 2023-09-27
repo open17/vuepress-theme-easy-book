@@ -4,7 +4,7 @@
   "main": "index.js",
   "author": "open17",
   "license": "MIT",
-  "description": "一个明亮/黑暗风格的vuepress 1.x 主题",
+  "description": "🪶一个明亮/黑暗风格的vuepress 1.x 主题",
   "scripts": {
     "dev": "vuepress dev example",
     "build": "vuepress build example"
