@@ -11,12 +11,8 @@
             <img src="https://img.shields.io/npm/l/vuepress-theme-easy-book.svg?style=flat-square">
         </a>
     </p>
-    </br>
-</div>
 
-```shell
-npm i vuepress-theme-easy-book -D
-```
+</div>
 
 ****
 <!-- <div align="center">
