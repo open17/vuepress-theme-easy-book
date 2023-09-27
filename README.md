@@ -13,9 +13,11 @@
     </p>
     </br>
 </div>
+
 ```shell
 npm i vuepress-theme-easy-book -D
 ```
+
 ****
 <!-- <div align="center">
   <a href="https://github.com/open17/vuepress-theme-easy-book/blob/master/README.md"><span>English</span></a>|中文
