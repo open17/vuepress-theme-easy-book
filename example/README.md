@@ -13,6 +13,7 @@
     </p>
     </br>
 </div>
+
 ```shell
 npm i vuepress-theme-easy-book -D
 ```

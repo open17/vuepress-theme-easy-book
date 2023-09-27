@@ -4,7 +4,7 @@
     <p align="center">
         <img src="https://img.shields.io/npm/dt/vuepress-theme-easy-book.svg?color=red&style=flat-square">
         <a href="https://www.npmjs.com/package/vuepress-theme-easy-book"><img src="https://img.shields.io/npm/v/vuepress-theme-easy-book.svg?style=flat-square" alt="Version"></a>
-        <a href="https://github.com/open17/vuepress-theme-qbook/issues/new/choose" target="_blank">
+        <a href="https://github.com/open17/vuepress-theme-easy-book/issues/new/choose" target="_blank">
             <img src="https://img.shields.io/static/v1?label=feedback&message=issues&color=orange&style=flat-square">
         </a>
         <a href="https://github.com/vuejs/vuepress-theme-easy-book/blob/master/LICENSE" target="_blank">
@@ -45,4 +45,3 @@ module.exports = {
     theme: 'easy-book',
 }
 ```
-
