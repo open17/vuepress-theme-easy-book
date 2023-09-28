@@ -148,20 +148,4 @@ export default {
 .dark .el-tabs__active-bar{
   background-color: goldenrod;
 }
-.dark .markdown-body pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #161b22;
-  border-radius: 6px;
-}
-.markdown-body pre {
-    padding: 16px;
-    overflow: auto;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: rgb(246, 248, 250);
-    border-radius: 6px;
-}
 </style>

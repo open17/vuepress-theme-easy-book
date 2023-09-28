@@ -208,6 +208,7 @@ export default {
       showMobileNav: false,
       isShowSearch: false,
       drawer: false,
+      hasNotInitMode:true,
       toggleDarkMode:'auto',
       nav: [{ text: "首页", link: "" }],
       activeIndex: "/",
@@ -249,6 +250,11 @@ export default {
     if(this.$themeConfig.HighlightOptions)this.options=this.$themeConfig.HighlightOptions;
     if(this.$themeConfig.defaultHighlight)this.optsGroup=this.$themeConfig.defaultHighlight;
     if(this.$themeConfig.limitHighlight)this.limitHighlight=this.$themeConfig.limitHighlight;
+    // 是否为刚开始需要初始化
+    if(this.hasNotInitMode){
+      this.hasNotInitMode=false;
+      this.toggleMode();
+    }
   },
   methods: {
     toggleMode(){
