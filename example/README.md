@@ -41,7 +41,7 @@ npm i vuepress-theme-easy-book -D
 <[npm]
 
 ```shell
-npm init
+npm i vuepress-theme-easy-book -D
 ```
 
 <()
@@ -49,7 +49,7 @@ npm init
 <[yarn]
 
 ```shell
-yarn init 
+yarn add vuepress-theme-easy-book -D
 ```
 <()
 
