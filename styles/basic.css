@@ -38,7 +38,7 @@
     padding-right: 10px;
   }
   .h-screen {
-    height: 100vh;
+    height: 100vh !important;
   }
   .text-xl {
     font-size: 1.5rem;
@@ -53,7 +53,6 @@
   .space-x-10 > * {
     margin-left: 1.25rem;
   }
-  
   .space-x-10 > *:first-child {
     margin-left: 0;
   }
@@ -119,10 +118,9 @@
   .w-85{
     width: 85vw;
   }
-
-.h-2screen{
-  height: 200vh;
-}
+  .w-95{
+    width: 95vw;
+  }
 
 .pb-15{
   padding-bottom: 15px;

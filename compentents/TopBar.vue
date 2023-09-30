@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="overflow-x-hidden w-screen">
     <!-- 搜索栏 -->
     <el-drawer
       title="全文搜索"
@@ -57,19 +57,19 @@
       </div>
     </el-dialog>
     <!-- header -->
-    <header>
+    <header :class="{'mobile-header':isMobile}">
       <div class="flex justify-between items-center">
         <!-- 标题 -->
         <div class="items-center flex justify-start space-x-10">
           <i
-            class="el-icon-guide text-xl site-title"
+            class="el-icon-guide text-xl site-title pl-10"
             @click="ClickMobileNav()"
             v-show="isMobile"
           ></i>
           <h2 class="site-title">{{ this.$site.title }}</h2>
         </div>
         <!-- 图标 -->
-        <div class="items-center space-x-10">
+        <div class="items-center space-x-10 justify-center flex">
           <el-popover
             placement="bottom"
             title="搜索"
@@ -341,6 +341,9 @@ header {
 }
 .dark header {
   background-color: #0d1117;
+}
+.mobile-header{
+  height: 10vh;
 }
 .dark .LeftNav,
 .dark .el-menu,

@@ -1,5 +1,6 @@
 <template>
-  <div class="overflow-x-hidden" :class="{ dark: isDarkMode }">
+  <div class="overflow-x-hidden main-container" :class="{ dark: isDarkMode }" style="">
+    <!-- TopBar正常20vh,移动端10vh -->
     <TopBarVue :isMobile="isMobile" :isdark="isDarkMode" />
     <div class="flex justify-end space-x-10 main-body" v-if="!isMobile">
       <div><LeftNavVue :isShow="!isMobile" :isdark="isDarkMode" /></div>
@@ -16,9 +17,9 @@
       <div><RightTocVue :headers="PageHeader" :isMobile="isMobile" /></div>
     </div>
     <div v-else>
-      <div class="main-body overflow-y pl-10 pr-10 w-screen">
+      <div class="main-body overflow-y pl-10 w-95">
         <Content class="markdown-body w-85" ref="scrollContainer" />
-        <div class="h-5"></div>
+        <!-- <div class="h-5"></div> -->
       </div>
     </div>
   </div>
@@ -119,17 +120,27 @@ export default {
 </script>
 
 <style>
+.main-container{
+  position: absolute;
+  top: 0vh;
+  left: 0vw;
+  width: 100vw;
+  height: 100vh;
+}
 .main-body {
   position: absolute;
-  bottom: 0vh;
   top: 20vh;
+  height: 78vh;
 }
 @media (max-width: 768px) {
   /* 小于等于 768px 宽度时的样式 */
   .main-body {
     /* 移动设备样式 */
     /* 添加移动设备特定的样式属性 */
-    top: 12vh;
+    top: 10vh;
+    height: 90vh;
+    left: 0;
+    right: 0;
   }
 }
 .dark .main-body,
