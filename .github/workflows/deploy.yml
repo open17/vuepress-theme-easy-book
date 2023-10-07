@@ -17,14 +17,11 @@ jobs:
         with:
           node-version: 16.19.0
 
-      # - name: Install yarn
-      #   run: npm install -g yarn@1.22.19
+      - name: Install dependencies
+        run: npm install
 
-      # - name: Install dependencies
-      #   run: yarn install
-
-      # - name: Build
-      #   run: yarn build
+      - name: Build
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5

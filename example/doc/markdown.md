@@ -1,6 +1,5 @@
 # Markdown增强
 > 下面部分内容源自[vuepress-theme-pad的Markdown增强文档](https://open17.github.io/vuepress-theme-qbook/cn/markdown.html)
-> 本主题为vuepress-theme-pad的重构版
 
 ## 折叠面板
 ```markdown

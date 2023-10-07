@@ -1,3 +1,5 @@
-# 问题与回答
-1. 网站变的有点点卡?
-这与本主题无关,大概是因为本文档网站加入了百度统计的原因
+# 问题反馈
+欢迎提交issues!
+<a href="https://github.com/open17/vuepress-theme-qbook/issues/new/choose" target="_blank">
+    <img src="https://img.shields.io/static/v1?label=feedback&message=issues&color=orange&style=flat-square">
+</a>
