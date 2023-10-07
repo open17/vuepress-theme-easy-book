@@ -1,0 +1,7 @@
+#!/bin/sh
+echo "Running 'yarn build' before push..."
+yarn build
+git add -A
+git commit -m "Add build result" --no-verify
+git push
+exit $?
