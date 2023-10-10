@@ -57,7 +57,7 @@
       </div>
     </el-dialog>
     <!-- header -->
-    <header :class="{'mobile-header':isMobile}">
+    <header :class="{ 'mobile-header': isMobile }">
       <div class="flex justify-between items-center">
         <!-- 标题 -->
         <div class="items-center flex justify-start space-x-10">
@@ -94,9 +94,9 @@
             <a
               class="hover-color text-xl"
               :class="{
-                'el-icon-sunny': toggleDarkMode=='light',
-                'el-icon-moon': toggleDarkMode=='dark',
-                'el-icon-cloudy-and-sunny': toggleDarkMode=='auto',
+                'el-icon-sunny': toggleDarkMode == 'light',
+                'el-icon-moon': toggleDarkMode == 'dark',
+                'el-icon-cloudy-and-sunny': toggleDarkMode == 'auto',
               }"
               @click="toggleMode()"
               slot="reference"
@@ -208,8 +208,8 @@ export default {
       showMobileNav: false,
       isShowSearch: false,
       drawer: false,
-      hasNotInitMode:true,
-      toggleDarkMode:'auto',
+      hasNotInitMode: true,
+      toggleDarkMode: "auto",
       nav: [{ text: "首页", link: "" }],
       activeIndex: "/",
       settingFormVisible: false,
@@ -247,24 +247,26 @@ export default {
     this.activeIndex = str.substring(0, str.indexOf("/"));
 
     // 代码高亮切换设置
-    if(this.$themeConfig.HighlightOptions)this.options=this.$themeConfig.HighlightOptions;
-    if(this.$themeConfig.defaultHighlight)this.optsGroup=this.$themeConfig.defaultHighlight;
-    if(this.$themeConfig.limitHighlight)this.limitHighlight=this.$themeConfig.limitHighlight;
+    if (this.$themeConfig.HighlightOptions)
+      this.options = this.$themeConfig.HighlightOptions;
+    if (this.$themeConfig.defaultHighlight)
+      this.optsGroup = this.$themeConfig.defaultHighlight;
+    if (this.$themeConfig.limitHighlight)
+      this.limitHighlight = this.$themeConfig.limitHighlight;
     // 是否为刚开始需要初始化
-    if(this.hasNotInitMode){
-      this.hasNotInitMode=false;
+    if (this.hasNotInitMode) {
+      this.hasNotInitMode = false;
       this.toggleMode();
     }
   },
   methods: {
-    toggleMode(){
-      if(this.toggleDarkMode=='dark'){
-        this.toggleDarkMode='light';
-      }else if(this.toggleDarkMode=='light'){
-        this.toggleDarkMode='auto';
-      }
-      else{
-        this.toggleDarkMode='dark';
+    toggleMode() {
+      if (this.toggleDarkMode == "dark") {
+        this.toggleDarkMode = "light";
+      } else if (this.toggleDarkMode == "light") {
+        this.toggleDarkMode = "auto";
+      } else {
+        this.toggleDarkMode = "dark";
       }
       this.$EventBus.$emit("toggleDarkMode", this.toggleDarkMode);
     },
@@ -342,7 +344,7 @@ header {
 .dark header {
   background-color: #0d1117;
 }
-.mobile-header{
+.mobile-header {
   height: 10vh;
 }
 .dark .LeftNav,

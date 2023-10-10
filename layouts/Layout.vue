@@ -3,7 +3,7 @@
     <!-- TopBar正常20vh,移动端10vh -->
     <TopBarVue :isMobile="isMobile" :isdark="isDarkMode" />
     <div class="flex justify-end space-x-10 main-body" v-if="!isMobile">
-      <div><LeftNavVue :isShow="!isMobile" :isdark="isDarkMode" /></div>
+      <el-card body-style="padding:0"><LeftNavVue :isShow="!isMobile" :isdark="isDarkMode" /></el-card>
       <el-card class="box-card overflow-y">
         <Content
           class="markdown-body"

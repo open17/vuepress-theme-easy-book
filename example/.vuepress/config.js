@@ -28,6 +28,7 @@ module.exports = {
       { text: '文档', link: 'doc' },
       { text: '问题', link: 'question' },
       { text: '进一步了解', link: 'more' },
+      { text: 'v1.2.x新版预览',link:'new'},
       { text: '更新日志', link: 'log' }
     ],
     group: {

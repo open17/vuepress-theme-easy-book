@@ -142,7 +142,7 @@
   .markdown-body h4 {
     margin-inline-start: -0.75rem;
     padding-inline-start: 0.75rem;
-    border-inline-start: 0.275rem solid #1e80ff;
+    border-inline-start: 0.275rem solid skyblue;
   }
   
   .dark .markdown-body h1,
@@ -157,7 +157,7 @@
   .markdown-body h6 {
     margin-inline-start: -0.75rem;
     padding-inline-start: 1rem;
-    border-inline-start: 0.41rem solid #1e80ff;
+    border-inline-start: 0.41rem solid skyblue;
   }
 
 /* markdown样式更改 取消#符号 */
