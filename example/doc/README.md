@@ -1,37 +1,35 @@
-# 主题文档
-这里是该主题文档部分,请查看具体章节
+<div align="center">
+    <h1 href=" open17.github.io/vuepress-theme-qbook/" align="center">Easy Book</h1>
+    <p align="center">< 一个明亮/黑暗风格的vuepress 1.x 主题 ></p>
+    <p align="center">
+        <img src="https://img.shields.io/npm/dt/vuepress-theme-easy-book.svg?color=red&style=flat-square">
+        <a href="https://www.npmjs.com/package/vuepress-theme-easy-book"><img src="https://img.shields.io/npm/v/vuepress-theme-easy-book.svg?style=flat-square" alt="Version"></a>
+        <a href="https://github.com/open17/vuepress-theme-qbook/issues/new/choose" target="_blank">
+            <img src="https://img.shields.io/static/v1?label=feedback&message=issues&color=orange&style=flat-square">
+        </a>
+        <a href="https://github.com/vuejs/vuepress-theme-easy-book/blob/master/LICENSE" target="_blank">
+            <img src="https://img.shields.io/npm/l/vuepress-theme-easy-book.svg?style=flat-square">
+        </a>
+    </p>
+    </br>
+</div>
+
+```shell
+npm i vuepress-theme-easy-book -D
+```
+****
+
+<!-- <div align="center">
+  <a href="https://github.com/open17/vuepress-theme-easy-book/blob/master/README.md"><span>English</span></a>|中文
+</div> -->
+
 ## 功能
-### 导航栏
-- 全文搜索区域
-- 代码高亮动态设置
-### 左工具栏
-- 编辑功能
-- 回到顶部功能
-- 折叠展开工具栏
-### 主体
-- 代码复制功能增强(hover显示+成功提示)
-- 代码块高亮动态切换
-- 视频
-- 荧光笔
-- 选项卡
-- 图片放大旋转
-- 支持多文档目录
-- 支持多文档导航栏
-### 右目录
-- 目录功能
-- 空值处理
-### 其他
-- 信息提示增强
-- 滚动条美化
-- 404页面
-## 安装
-```
-npm i vuepress-theme-easy-book
-```
-## 引用
-```js
-// .vuepress/config.js
-  module.exports = {
-      // Use this theme
-      theme: 'easy-book',
-  }
+- 支持在线切换多种代码高亮(atom-one,github,monokai,tokyo-night等)
+- 本地全文内容搜索
+- 移动端网页端适配
+- 支持明暗双模式
+- Markdown增强:视频插入,选项卡,图片增强,荧光笔,代码复制...
+- 工具栏: 一键编辑,回到顶部,章节,工具栏折叠...
+- 其他功能: h1-h6目录,章节分组,多文件目录,自定义导航栏...
+- 持续维护中
+  

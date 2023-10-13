@@ -1,5 +1,5 @@
 <template>
-  <div class="LeftNav" :style="styles" v-if="isShow">
+  <div class="LeftNav" :style="styles" v-if="isShow" >
     <el-menu
       :collapse="isCollapse"
       default-active="parts"
@@ -93,28 +93,10 @@
         <i class="el-icon-edit"></i>
         <span slot="title">编辑</span>
       </el-menu-item>
-      <!-- 分享 -->
-      <!-- <el-menu-item index="share">
-        <i class="el-icon-share"></i>
-        <span slot="title">分享</span>
-      </el-menu-item> -->
-      <!-- 书签 -->
-      <!-- <el-menu-item index="mark">
-        <i class="el-icon-s-management"></i>
-        <span slot="title">书签</span>
-      </el-menu-item> -->
       <!-- 留言墙 -->
       <el-menu-item index="comment">
-        <el-badge value="new" v-if="isCollapse && isNew">
-          <i class="el-icon-s-comment"></i>
-        </el-badge>
-        <i class="el-icon-s-comment" v-else></i>
+        <i class="el-icon-s-comment"></i>
         <span slot="title">留言墙</span>
-      </el-menu-item>
-      <!-- 回到顶部 -->
-      <el-menu-item index="backtotop" @click="BackToTop()">
-        <i class="el-icon-s-promotion"></i>
-        <span slot="title">回到顶部</span>
       </el-menu-item>
       <!-- 折叠 -->
       <el-menu-item @click="Collapse()" v-if="ifspan" index="span">
@@ -134,19 +116,17 @@
 
 <script>
 export default {
-  props: ["isShow", "isdark"],
+  props: ["isShow", "isdark","is_dark"],
   data() {
     return {
-      styles: "background-color: #fff",
+      styles: "background-color: #fff;width: 15vw;",
       isCollapse: false,
       drawer: false,
       direction: "rtl",
       value: 20,
       ifspan: false,
-      styles: "width: 15vw;",
       realgroup: null,
       editurl: null,
-      isNew: false,
     };
   },
   mounted() {
@@ -154,9 +134,6 @@ export default {
     var str = this.$page["relativePath"];
     this.updategroup(str.substring(0, str.indexOf("/")));
     this.$watch("$page.relativePath", this.handleRelativePathChange);
-    // this.$EventBus.$on("activeIndex", (data) => {
-    //     this.updategroup(data);
-    // });
     this.isMobile = window.matchMedia("(max-width: 768px)").matches;
     if (this.isMobile) this.styles = "width: 80vw;";
     this.ifspan = !this.isMobile;
@@ -190,9 +167,9 @@ export default {
       if (!this.isCollapse) {
         this.styles = "width: 15vw;";
         if (this.isMobile) this.styles = "width: 80vw;";
-        this.$EventBus.$emit("isCollapse", "n");
+        this.$EventBus.$emit("isCollapse", "0");
       } else {
-        this.$EventBus.$emit("isCollapse", "y");
+        this.$EventBus.$emit("isCollapse", "1");
         this.styles = "";
       }
     },
@@ -206,61 +183,33 @@ export default {
   },
 };
 </script>
-<style scoped>
-::-webkit-scrollbar-thumb {
-  background-color: transparent;
+<style>
+.dark-box {
+  filter: invert(1) !important;
 }
-.el-menu {
-      border-right: 0;
-  }
+.el-menu a {
+  text-decoration: none;
+  color: rgb(18, 18, 18);
+}
+.el-menu a:hover,
+.el-menu a:active {
+  color: #4389e6;
+}
+
+.LeftNav .el-menu {
+  border-right: 0;
+}
 @media (min-width: 768px) {
-  
   .LeftNav {
-    height: 70vh;
+    height: 90vh;
     overflow-x: hidden;
     overflow-y: auto;
-    scrollbar-width: none;
-    -moz-scrollbars-none: none;
-    scrollbar-color: transparent transparent;
-    /* border: 1px solid #000000; */
   }
 }
 @media (max-width: 768px) {
   /* 小于等于 768px 宽度时的样式 */
   .LeftNav {
     width: 80vw;
-    /* overflow-x: hidden;
-    overflow-y: auto;
-    scrollbar-width: none;
-    -moz-scrollbars-none: none;
-    scrollbar-color: transparent transparent; */
   }
-}
-.dark .LeftNav,
-.dark .el-menu,
-.dark .el-menu-item,
-.dark .el-menu-item-group,
-.dark .el-submenu {
-  background-color: #0d1117;
-  color: #fff;
-}
-.dark .el-submenu__title {
-  color: #fff !important;
-}
-.dark .is-active {
-  color: gold !important;
-}
-.dark .el-menu-item a {
-  color: #fff;
-}
-.dark .el-menu-item:active,
-.dark .el-menu-item:focus {
-  background-color: #2b2f36 !important;
-}
-.dark .el-menu-item:hover,
-.dark .el-submenu__title:focus,
-.dark .el-submenu__title:hover {
-  background-color: #2b2f36 !important;
-  color: gold !important;
 }
 </style>

@@ -1,6 +1,5 @@
 <template>
   <div class="overflow-x overflow-y">
-    <TopBarVue/>
     <div class="pic">
       <el-empty :image-size="200" :description="getText()">
         <el-link type="primary" :href="$withBase('/')" >
@@ -12,11 +11,9 @@
 </template>
 
 <script>
-import TopBarVue from '../compentents/TopBar.vue';
 import "../styles/basic.css"
 export default {
     components:{
-        TopBarVue
     },
     methods:{
         getText(params) {
@@ -32,10 +29,9 @@ export default {
 
         }
     },
-    mounted(){
-
-        this.$message.error(this.getText());
-    }
+    // mounted(){
+    //     this.$message.error(this.getText());
+    // }
 };
 </script>
 

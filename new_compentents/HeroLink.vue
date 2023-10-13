@@ -1,27 +1,29 @@
 <template>
-  <button>
+  <a :href="link">
     <p>{{Name}}</p>
     <svg stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg">
         <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
     </svg>
-</button>
+</a>
 </template>
 
 <script>
 export default {
-    props:["Name"]
+    props:["Name","link"]
 }
 </script>
 
 <style scoped>
-button {
+a {
+
   padding: 0;
   margin: 0;
+  margin-left: 3%;
   border: none;
   background: none;
 }
 
-button {
+a {
   --primary-color: #111;
   --hovered-color: rgb(207, 22, 22);
   position: relative;
@@ -32,14 +34,14 @@ button {
   align-items: center;
 }
 
-button p {
+a p {
   margin: 0;
   position: relative;
   font-size: 20px;
   color: var(--primary-color)
 }
 
-button::after {
+a::after {
   position: absolute;
   content: "";
   width: 0;
@@ -50,7 +52,7 @@ button::after {
   transition: 0.3s ease-out;
 }
 
-button p::before {
+a p::before {
   position: absolute;
 /*   box-sizing: border-box; */
   content: "";
@@ -61,20 +63,20 @@ button p::before {
   transition: 0.3s ease-out;
 }
 
-button:hover::after {
+a:hover::after {
   width: 100%;
 }
 
-button:hover p::before {
+a:hover p::before {
   width: 100%;
 }
 
-button:hover svg {
+a:hover svg {
   transform: translateX(4px);
   color: var(--hovered-color)
 }
 
-button svg {
+a svg {
   color: var(--primary-color);
   transition: 0.2s;
   position: relative;

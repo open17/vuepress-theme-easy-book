@@ -1,6 +1,6 @@
 <template>
   <el-row :gutter="20">
-    <el-col :span="8" v-for="(g, index) in group" :key="index">
+    <el-col :sm="8" :xs="24" v-for="(g, index) in group" :key="index">
       <el-card :body-style="{ padding: '0px' }" class="_my-card" shadow="never">
         <img :src="$withBase(g.img_url)" class="_image" />
         <div class="_card-content">
@@ -23,6 +23,9 @@ export default {
 </script>
 
 <style>
+.dark-box ._my-card{
+  filter: invert(0);
+}
 ._my-card {
   margin-bottom: 20px;
   border: 1px solid #888;
