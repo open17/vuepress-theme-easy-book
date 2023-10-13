@@ -1,5 +1,5 @@
 <template>
-  <a :href="$withBase(link)"><span>{{Name}}</span></a>
+  <router-link :to="link"><span>{{Name}}</span></router-link>
 </template>
 
 <script>

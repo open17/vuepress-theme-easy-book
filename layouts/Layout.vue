@@ -82,7 +82,7 @@
     <div class="navbar" :class="{ 'dark-box': is_dark_mode }">
       <div class="navbar-top">
         <div class="navbar-brand">
-          <img class="logo" :src="$withBase(icon)" alt="Logo" v-if="icon" />
+          <router-link to="/"><img class="logo" :src="$withBase(icon)" alt="Logo" v-if="icon"  /></router-link>
           <span class="title">{{ title }}</span>
         </div>
         <div class="navbar-links" v-if="!is_mobile">
