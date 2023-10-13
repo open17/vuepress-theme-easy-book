@@ -1,12 +1,12 @@
 <template>
   <div :class="{'dark':is_dark_mode}">
     <div class="content-page">
-      <LeftNavVue :isdark="is_dark_mode"/>
+      <LeftNavVue :isdark="is_dark_mode" v-if="!is_mobile"/>
       <Content
         class="markdown-body"
-        :class="{ 'collapse-markdown-body': isCollapse == 1 }"
+        :class="{ 'collapse-markdown-body': isCollapse == 1,'mobile-markdown-body':is_mobile }"
       />
-      <RightTocVue :page_header="page_header" />
+      <RightTocVue :page_header="page_header"  v-if="!is_mobile"/>
     </div>
   </div>
 </template>
@@ -53,6 +53,11 @@ export default {
 .collapse-markdown-body {
   margin-left: 10% !important;
   width: 68%;
+}
+
+.mobile-markdown-body {
+  margin-left: 5% !important;
+  width: 90%;
 }
 
 .markdown-body h1,

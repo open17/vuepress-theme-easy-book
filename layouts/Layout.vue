@@ -48,22 +48,53 @@
         >
       </div>
     </el-dialog>
+    <el-drawer
+      title="目录"
+      :visible.sync="show_mobile_menu"
+      direction="ltr"
+      size="80%"
+      class=""
+    >
+      <el-menu :router="false" class="child" style="width: 80vw">
+        <el-submenu index="1">
+          <template slot="title">
+            <i class="el-icon-location"></i>
+            <span>导航</span>
+          </template>
+
+          <el-menu-item
+            v-for="(item, index) in nav"
+            :key="index"
+            :index="item.link"
+            class="flex items-center"
+          >
+            <router-link
+              :to="'/' + item.link"
+              class="w-full h-full"
+            >
+              {{ item.text }}
+            </router-link>
+          </el-menu-item>
+        </el-submenu>
+      </el-menu>
+      <LeftNav :isShow="true" />
+    </el-drawer>
     <div class="navbar" :class="{ 'dark-box': is_dark_mode }">
       <div class="navbar-top">
         <div class="navbar-brand">
           <img class="logo" :src="$withBase(icon)" alt="Logo" v-if="icon" />
           <span class="title">{{ title }}</span>
         </div>
-        <div class="navbar-links">
-          <el-link
+        <div class="navbar-links" v-if="!is_mobile">
+          <router-link
             v-for="(i, index) in nav"
             :key="index"
-            :href="$withBase('/' + i.link)"
+            :to="'/' + i.link"
             :class="{ 'active-link': index === activeLink }"
             @click="setActiveLink(index, i.link)"
           >
             {{ i.text }}
-          </el-link>
+          </router-link>
         </div>
         <div class="navbar-icons">
           <i
@@ -72,8 +103,14 @@
           ></i>
           <i class="icon-button el-icon-search" @click="drawer = !drawer"></i>
           <i
-            class="icon-button el-icon-set-up last-icon"
+            class="icon-button el-icon-set-up"
+            :class="{ 'last-icon': !is_mobile }"
             @click="is_show_setting = !is_show_setting"
+          ></i>
+          <i
+            class="icon-button el-icon-more last-icon"
+            v-if="is_mobile"
+            @click="show_mobile_menu = true"
           ></i>
         </div>
       </div>
@@ -99,14 +136,17 @@ import SearchBox from "@SearchBox";
 import ContentPageVue from "../pages/ContentPage.vue";
 import HeroPageVue from "../pages/HeroPage.vue";
 import "../styles/basic.css";
+import LeftNav from "../compentents/LeftNav.vue";
 export default {
   components: {
     SearchBox,
     HeroPageVue,
     ContentPageVue,
+    LeftNav,
   },
   data() {
     return {
+      show_mobile_menu: false,
       limitHighlight: 5,
       isClickMobileNav: false,
       showMobileNav: false,
@@ -114,7 +154,7 @@ export default {
       drawer: false,
       is_show_setting: false,
       is_dark_mode: true,
-      is_hero: true,
+      is_hero: false,
       is_mobile: false,
       activeLink: 0,
       is_lock: false,
@@ -169,6 +209,9 @@ export default {
     },
     setActiveLink(linkId, link) {
       this.activeLink = linkId;
+
+      // this.$router.replace(this.$withBase(link));
+
       this.isHero();
     },
     isMobile() {
@@ -213,6 +256,7 @@ export default {
     },
   },
   mounted() {
+    this.$watch('$page.path', this.isHero);
     if (this.$themeConfig.icon) this.icon = this.$themeConfig.icon;
     if (this.$themeConfig.title) this.title = this.$themeConfig.title;
     if (this.$themeConfig.nav) this.nav = this.$themeConfig.nav;
@@ -279,7 +323,7 @@ export default {
 }
 @media screen and (max-width: 768px) {
   html {
-    font-size: 8px;
+    font-size: 11px;
   }
 }
 * {
@@ -346,6 +390,7 @@ export default {
   display: flex;
   align-items: center;
   text-align: center;
+  height: 8vh;
 }
 .icon-button {
   margin-left: 10px;
@@ -360,29 +405,30 @@ export default {
 .navbar-links {
   margin-left: 30px;
   display: flex;
-  justify-content: flex-start;
-  height: 8vh; /* Adjust the height as needed */
+  justify-content: center;
+  margin-top: 3vh;
+  height: 5vh; /* Adjust the height as needed */
 }
 
-.navbar-links .el-link {
+.navbar-links a {
   margin-right: 30px;
   /* font-weight: 530; */
   color: #3b3838;
   transition: color 0.3s;
 }
 
-.navbar-links .el-link.active-link,
-.navbar-links .el-link.active-link:hover {
+.navbar-links .active-link,
+.navbar-links .active-link:hover {
   color: #007bff;
 }
 
-.navbar-links .el-link.active-link::after,
-.navbar-links .el-link .active-link:hover::after {
+.navbar-links .active-link::after,
+.navbar-links  .active-link:hover::after {
   height: 3px;
   transform: scaleX(1);
 }
 
-.navbar-links .el-link ::after {
+.navbar-links a ::after {
   content: "";
   position: absolute;
   bottom: 0;
