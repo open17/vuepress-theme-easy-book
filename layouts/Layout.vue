@@ -58,7 +58,7 @@
           <el-link
             v-for="(i, index) in nav"
             :key="index"
-            :href="'/' + i.link"
+            :href="$withBase('/' + i.link)"
             :class="{ 'active-link': index === activeLink }"
             @click="setActiveLink(index, i.link)"
           >
