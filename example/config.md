@@ -215,6 +215,13 @@ themeConfig:{
     hero_details_title: "Features",
 }
 ```
+## 最大搜索
+搜索栏给出的最大搜索建议数量，默认为50,你可以通过在配置文件中添加以下内容来更改此设置：
+```js
+themeConfig:{
+  searchMaxSuggestions:25,
+}
+```
 ## 其他常用配置
 ## 示例
 ### 示例一

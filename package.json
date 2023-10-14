@@ -3,7 +3,7 @@
   "version": "1.2.1",
   "main": "index.js",
   "author": "open17",
-  "license": "LGPL-3.0-or-later",
+  "license": "GPL-3.0",
   "description": "🌠 明亮/黑暗风格的vuepress 1.x 主题",
   "scripts": {
     "dev": "vuepress dev example",

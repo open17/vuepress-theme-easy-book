@@ -1,7 +1,7 @@
 module.exports = (options, ctx) => {
   const { siteConfig } = ctx;
   if(!siteConfig.themeConfig)siteConfig.themeConfig={};
-  else if(!siteConfig.themeConfig.searchMaxSuggestions)siteConfig.themeConfig.searchMaxSuggestions=100;
+  else if(!siteConfig.themeConfig.searchMaxSuggestions)siteConfig.themeConfig.searchMaxSuggestions=50;
     return {
       chainWebpack: (config) => {
         config.resolve.alias.set('core-js/library/fn', 'core-js/features');

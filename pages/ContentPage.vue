@@ -8,6 +8,10 @@
       />
       <RightTocVue :page_header="page_header"  v-if="!is_mobile"/>
     </div>
+    <div class="hero-footer">
+      <div class="hero-footer-divider"></div>
+      <div v-html="footer_html"></div>
+    </div>
   </div>
 </template>
 
@@ -24,12 +28,22 @@ export default {
   data() {
     return {
       isCollapse: false,
+      footer_html: ``,
     };
+  },
+  methods:{
+    getLink(){
+
+    }
   },
   mounted() {
     this.$EventBus.$on("isCollapse", (data) => {
       this.isCollapse = data;
     });
+    // 检查 footer_html 是否存在于 this.$themeConfig 中
+    if (this.$themeConfig.footer_html) {
+        this.footer_html = this.$themeConfig.footer_html;
+      }
   },
 };
 </script>
