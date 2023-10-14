@@ -19,7 +19,7 @@
 </div> -->
 
 ## 展示
-[在线预览](https://open17.github.io/vuepress-theme-easy-book/doc)
+[在线预览](https://open17.github.io/vuepress-theme-easy-book)
 
 ## 功能
 - v1.2.x重构UI,支持封面
