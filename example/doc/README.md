@@ -1,6 +1,6 @@
 <div align="center">
     <h1 href=" open17.github.io/vuepress-theme-qbook/" align="center">Easy Book</h1>
-    <p align="center">< 一个明亮/黑暗风格的vuepress 1.x 主题 ></p>
+    <p align="center">< 一款美观,知识库向的vuepress 1.x 主题 ></p>
     <p align="center">
         <img src="https://img.shields.io/npm/dm/vuepress-theme-easy-book.svg?color=red&style=flat-square">
         <a href="https://www.npmjs.com/package/vuepress-theme-easy-book"><img src="https://img.shields.io/npm/v/vuepress-theme-easy-book.svg?style=flat-square" alt="Version"></a>

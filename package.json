@@ -4,7 +4,7 @@
   "main": "index.js",
   "author": "open17",
   "license": "GPL-3.0",
-  "description": "🌠 明亮/黑暗风格的vuepress 1.x 主题",
+  "description": "🌠 一款美观,知识库向的vuepress主题",
   "scripts": {
     "dev": "vuepress dev example",
     "build": "vuepress build example"
