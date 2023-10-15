@@ -257,6 +257,7 @@ export default {
   },
   mounted() {
     this.$watch('$page.path', this.isHero);
+    this.$watch('$page.path', this.isLock);
     if (this.$themeConfig.icon) this.icon = this.$themeConfig.icon;
     if (this.$themeConfig.title) this.title = this.$themeConfig.title;
     if (this.$themeConfig.nav) this.nav = this.$themeConfig.nav;

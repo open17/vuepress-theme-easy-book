@@ -1,10 +1,19 @@
 <template>
-  <router-link :to="link"><span>{{Name}}</span></router-link>
+<div>
+  <a :href="link" v-if="isOutLink(link)"><span>{{Name}}</span></a>
+<router-link :to="link" v-else><span>{{Name}}</span></router-link>
+</div>
+  
 </template>
 
 <script>
 export default {
-    props:["Name","link"]
+    props:["Name","link"],
+      methods: {
+    isOutLink(link) {
+      return link.startsWith("http://") || link.startsWith("https://");
+    },
+  },
 };
 </script>
 

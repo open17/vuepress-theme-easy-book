@@ -122,7 +122,7 @@ module.exports = {
               New UI!
           </h3>
       Let's check what's new in <h4 style="display:inline-block;margin:0;color: rgb(14 165 233)">vuepress-theme-easy-book</h4>@v1.2.x</span>
-      <a href="/log" style="text-decoration-line: none;margin:0;padding:5px 10px; background-color:black; color: white; border: none; cursor: pointer; border-radius: 50px;">Look here
+      <a href="/vuepress-theme-easy-book/log" style="text-decoration-line: none;margin:0;padding:5px 10px; background-color:black; color: white; border: none; cursor: pointer; border-radius: 50px;">Look here
       <svg stroke-width="4" style="vertical-align:middle;width:1rem;height:1rem;color:#fff;" stroke="currentColor" viewBox="0 0 24 24" fill="none"  xmlns="http://www.w3.org/2000/svg">
       <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
       </svg>
