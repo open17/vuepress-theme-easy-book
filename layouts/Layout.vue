@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" v-if="is_loaded">
     <!-- 搜索栏 -->
     <el-drawer
       title="Fast Search"
@@ -147,6 +147,7 @@ export default {
   data() {
     return {
       show_mobile_menu: false,
+      is_loaded:false,
       limitHighlight: 5,
       isClickMobileNav: false,
       showMobileNav: false,
@@ -209,9 +210,6 @@ export default {
     },
     setActiveLink(linkId, link) {
       this.activeLink = linkId;
-
-      // this.$router.replace(this.$withBase(link));
-
       this.isHero();
     },
     isMobile() {
@@ -272,6 +270,7 @@ export default {
       this.optsGroup = this.$themeConfig.defaultHighlight;
     if (this.$themeConfig.limitHighlight)
       this.limitHighlight = this.$themeConfig.limitHighlight;
+    this.is_loaded=true;
     this.$EventBus.$on("clipboard-success", (data) => {
       this.$message({
         message: "复制成功",
