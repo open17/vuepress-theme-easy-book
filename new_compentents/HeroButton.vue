@@ -1,5 +1,5 @@
 <template>
-<div>
+<div style="margin-right:2%">
   <a :href="link" v-if="isOutLink(link)"><span>{{Name}}</span></a>
 <router-link :to="link" v-else><span>{{Name}}</span></router-link>
 </div>

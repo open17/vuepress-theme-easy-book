@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="display:flex;padding:0;margin-left:2%">
     <a :href="link" v-if="isOutLink(link)">
       <p>{{ Name }}</p>
       <svg
@@ -52,7 +52,6 @@ export default {
 a {
   padding: 0;
   margin: 0;
-  margin-left: 3%;
   border: none;
   background: none;
 }
