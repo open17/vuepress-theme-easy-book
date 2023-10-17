@@ -4,6 +4,7 @@
   "main": "index.js",
   "author": "open17",
   "license": "GPL-3.0",
+  "repository": "https://github.com/open17/vuepress-theme-easy-book.git",
   "description": "🌠 一款美观,知识库向的vuepress主题",
   "scripts": {
     "dev": "vuepress dev example",
