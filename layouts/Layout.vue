@@ -90,8 +90,7 @@
             v-for="(i, index) in nav"
             :key="index"
             :to="'/' + i.link"
-            :class="{ 'active-link': index === activeLink }"
-            @click="setActiveLink(index, i.link)"
+            :class="{ 'active-link': i.link === activeLink }"
           >
             {{ i.text }}
           </router-link>
@@ -190,6 +189,18 @@ export default {
     };
   },
   methods: {
+    getActiveUrl(url){
+      if(url.length==1){
+        return url.substring(1, url.length);
+      }
+      if(url.endsWith('/')){
+        return url.substring(1, url.length - 1)
+      }
+      else if(url.endsWith('.html')){
+        return url.substring(1, url.length - 5);
+      }
+      return url.substring(1, url.length);
+    },
     applySetting() {
       this.$notify({
         title: "设置",
@@ -208,8 +219,9 @@ export default {
       if (!this.is_dark_mode) info = "light";
       this.$EventBus.$emit("toggleDarkMode", info);
     },
-    setActiveLink(linkId, link) {
-      this.activeLink = linkId;
+    setActiveLink() {
+      this.activeLink = this.getActiveUrl(this.$page.path);
+      console.log(this.activeLink);
       this.isHero();
     },
     isMobile() {
@@ -220,6 +232,7 @@ export default {
     },
     isLock() {
       this.is_lock = this.$page.frontmatter.lock;
+      this.tryOpen();
     },
     tryOpen() {
       if (!this.is_lock) {
@@ -254,7 +267,8 @@ export default {
     },
   },
   mounted() {
-    this.$watch('$page.path', this.isHero);
+    // this.$watch('$page.path', this.isHero);
+    this.$watch('$page.path', this.setActiveLink);
     this.$watch('$page.path', this.isLock);
     if (this.$themeConfig.icon) this.icon = this.$themeConfig.icon;
     if (this.$themeConfig.title) this.title = this.$themeConfig.title;
@@ -429,7 +443,7 @@ export default {
 }
 
 .navbar-links a ::after {
-  content: "";
+  content: "_";
   position: absolute;
   bottom: 0;
   left: 0;

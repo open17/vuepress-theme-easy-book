@@ -115,7 +115,7 @@ module.exports = {
     hero_button: { name: "Get Started", link: "/doc" },
     hero_link: { name: "Read Config", link: "/config" },
     footer_html: `<div style="align-items: center;text-align: center;">
-          <p>GLP-3.0 Licensed | Copyright © 2023-present open17</p>
+          <p>GPL-3.0 Licensed | Copyright © 2023-present open17</p>
       </div><br/><br/>`,
     hero_banner_html: `<span style="color:gray">
           <h3 style="display:inline-block;margin:0;color:#000">
