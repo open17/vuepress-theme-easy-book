@@ -50,8 +50,8 @@ module.exports = {
         {
           text: '新手教程',
           subgroup: [
-            { text: '环境配置', link: 'doc/beginner/start'},
-            { text: '安装&使用', link: 'doc/beginner/install' }
+            { text: '环境配置', link: 'doc/beginner/install'},
+            { text: '安装&使用', link: 'doc/beginner/start' }
           ]
         },
         {

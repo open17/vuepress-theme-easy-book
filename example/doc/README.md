@@ -1,26 +1,4 @@
-<div align="center">
-    <h1 href=" open17.github.io/vuepress-theme-qbook/" align="center">Easy Book</h1>
-    <p align="center">< 一款美观,知识库向的vuepress 1.x 主题 ></p>
-    <p align="center">
-        <img src="https://img.shields.io/npm/dm/vuepress-theme-easy-book.svg?color=red&style=flat-square">
-        <a href="https://www.npmjs.com/package/vuepress-theme-easy-book"><img src="https://img.shields.io/npm/v/vuepress-theme-easy-book.svg?style=flat-square" alt="Version"></a>
-        <a href="https://github.com/open17/vuepress-theme-easy-book/issues/new/choose" target="_blank">
-            <img src="https://img.shields.io/static/v1?label=feedback&message=issues&color=orange&style=flat-square">
-        </a>
-        <a href="https://github.com/vuejs/vuepress-theme-easy-book/blob/master/LICENSE" target="_blank">
-            <img src="https://img.shields.io/npm/l/vuepress-theme-easy-book.svg?style=flat-square">
-        </a>
-    </p>
-</div>
-
-****
-<!-- <div align="center">
-  <a href="https://github.com/open17/vuepress-theme-easy-book/blob/master/README.md"><span>English</span></a>|中文
-</div> -->
-
-## 展示
-[在线预览](https://open17.github.io/vuepress-theme-easy-book/doc)
-
+# vuepress-theme-easy-book
 ## 功能
 - v1.2.x重构UI,支持封面
 - 支持在线切换多种代码高亮(atom-one,github,monokai,tokyo-night等)
