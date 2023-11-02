@@ -1,46 +1,31 @@
 <template>
-  <div class="overflow-x overflow-y">
-    <div class="pic">
-      <el-empty :image-size="200" :description="getText()">
-        <el-link type="primary" :href="$withBase('/')" >
-            take me home~
-        </el-link>
-      </el-empty>
+<div class="relative h-screen overflow-hidden">
+    <img src="../assets/404.svg" class="absolute object-cover w-full h-full"/>
+    <div class="absolute inset-0 bg-black opacity-25">
     </div>
-  </div>
+    <div class="container relative z-10 flex items-center px-6 py-32 mx-auto md:px-12 xl:py-40">
+        <div class="relative z-10 flex flex-col items-center w-full font-mono">
+            <h1 class="mt-4 text-5xl font-extrabold leading-tight text-center text-white">
+                You&#x27;re alone here
+            </h1>
+            <p class="font-extrabold text-white text-8xl my-44 animate-bounce">
+                404
+            </p>
+            <router-link to="/" class=" text-white font-bold text-3xl border-2 rounded-xl p-2">
+            返回
+            </router-link>
+        </div>
+    </div>
+</div>
 </template>
 
 <script>
-import "../styles/basic.css"
+import "tailwindcss/tailwind.css"
 export default {
-    components:{
-    },
-    methods:{
-        getText(params) {
-            const randomInt = Math.floor(Math.random() * 5);
-            var text = [
-                "我们是怎么来到这里的?",
-                "看起来有些broken link",
-                "这是一个404页面",
-                "你正在寻找的页面不存在",
-                "你似乎来到了没有知识存在的荒原",
-            ]
-            return text[randomInt];
 
-        }
-    },
-    // mounted(){
-    //     this.$message.error(this.getText());
-    // }
-};
+}
 </script>
 
 <style>
-.pic {
-  overflow-y: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh; /* 调整为适合您的页面高度 */
-}
+
 </style>

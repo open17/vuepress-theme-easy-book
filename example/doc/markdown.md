@@ -3,17 +3,11 @@
 
 ## 折叠面板
 ```markdown
-<edetails title="折叠面板1">
-这里是内容
-</edetails>
 <details>
 <summary>折叠面板2</summary>
 这里是内容
 </details>
 ```
-<edetails title="折叠面板1">
-这里是内容
-</edetails>
 
 
 <details>
@@ -214,3 +208,5 @@ inline void write(int x)
 
 
 @@tab
+
+## $a^1_{1}$ 
