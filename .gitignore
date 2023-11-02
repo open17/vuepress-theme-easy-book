@@ -1,4 +1,3 @@
 .npmignore
 node_modules/
 .vscode/settings.json
-example/.vuepress/dist/
