@@ -4,7 +4,7 @@ module.exports = {
   theme: path.resolve(__dirname, '../../'),
   // Fill in the webpage title in title
   title: 'vuepress-theme-easy-book',
-  base: "/vuepress-theme-easy-book/",
+  // base: "/vuepress-theme-easy-book/",
   markdown: {
     extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6']
   },
@@ -108,55 +108,6 @@ module.exports = {
       ],
     defaultHighlight:["stackoverflow-dark","stackoverflow-light",],
     limitHighlight: 5,
-    hero_img_scr: "hero_example.svg",
-    hero_title: "Rapidly build knowledge base websites only using Markdown.",
-    hero_button: { name: "Get Started", link: "/doc" },
-    hero_link: { name: "Read Config", link: "/config" },
-    hero_description_html: `      <span>
-      The <span style="color: rgb(14 165 233)">vuepress-theme-easy-book</span> 
-      lets you efficiently create personal knowledge base websites or comprehensive documentation platforms
-       <span style="color: rgb(14 165 233)">without</span> using any codes, 
-       which enables you to concentrate on the <span style="color: rgb(14 165 233)">notes</span> 
-       and <span style="color: rgb(14 165 233)">knowledge</span> itself.
-    </span>`,
-    card_group: [
-      {
-        img_url: "0460da93-5893-4e6f-ab92-8250eb4e60a3.webp",
-        description: "New Features is coming soon...",
-        title: "v1.2.x",
-        link: "#",
-      },
-      {
-        img_url: "437a9e96-e685-4a4f-a6ad-2be341e56e77.webp",
-        description: "New Features is coming soon...",
-        title: "v1.2.x",
-        link: "#",
-      },
-      {
-        img_url: "d38a24e2-c730-42e6-93ed-6ddad0d88d62.webp",
-        description: "New Features is coming soon...",
-        title: "v1.2.x",
-        link: "#",
-      },
-      {
-        img_url: "e2cfd3c6-6e97-4919-91af-a9f795cf3316.webp",
-        description: "New Features is coming soon...",
-        title: "v1.2.x",
-        link: "#",
-      },
-      {
-        img_url: "4b09cc7b-e61d-440a-8397-ae74d12f1e96.webp",
-        description: "New Features is coming soon...",
-        title: "v1.2.x",
-        link: "#",
-      },
-      {
-        img_url: "7db51a0d-9158-4758-b943-bc6d4e1cc226.webp",
-        description: "New Features is coming soon...",
-        title: "v1.2.x",
-        link: "#",
-      },
-    ],
     
   }
 }
