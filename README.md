@@ -19,7 +19,8 @@
 </div> -->
 
 ## 展示
-[在线预览](https://open17.github.io/vuepress-theme-easy-book)
+[v1.2.x](https://open17.github.io/vuepress-theme-easy-book)
+[v1.3.0测试版](https://vuepress-theme-easy-book.vercel.app/)
 
 ## 功能
 - v1.2.x重构UI,支持封面

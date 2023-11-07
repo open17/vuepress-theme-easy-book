@@ -23,7 +23,6 @@ export default {
       cta_title: "Rapidly build knowledge base websites only using Markdown.",
       cta_button: { name: "Get Started", link: "#" },
       cta_link: { name: "Read Doc", link: "#" },
-      card_group: [],
       cta_description_html: ``,
     };
   },

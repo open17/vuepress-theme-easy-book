@@ -42,6 +42,9 @@ export default {
     return {
       footer:"Copyright © 2023-present - Made by open17 with ♥ "
     }
+  },
+  mounted(){
+    if(this.$themeConfig.footer)this.footer=this.$themeConfig.footer;
   }
 }
 </script>

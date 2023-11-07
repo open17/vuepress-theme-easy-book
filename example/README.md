@@ -25,7 +25,6 @@ card_group:
     title: "文章加密"
     link: "#"
 cta:
-  img: "example.svg"
   title: "快速构建知识库&文档网站"
   button:
     name: "快速开始"
@@ -197,15 +196,10 @@ hero:
 
 <HeroSection info="hero"/>
 
-
 <CardGroup info="card_group"/>  
 
 
 <LogoGroup info="example_logos"/>
-
-
-
-
 
 
 

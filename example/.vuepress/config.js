@@ -26,87 +26,50 @@ module.exports = {
     title: "Easy-Book",
     lock_password: '123456',
     nav: [
-      { text: 'Home', link: '' },
-      { text: 'Doc', link: 'doc' },
-      { text: 'Config', link: 'config' },
-      { text: 'Log', link: 'log' }
+      { text: '主页', link: '' },
+      { text: '指南', link: 'doc' },
+      { text: '配置', link: 'config' },
+      { text: '日志', link: 'log' }
     ],
     group: {
       'doc': [
         {
-          text:'文档',
-         link: 'doc' ,
+          text: '介绍',
+          link: 'doc',
         },
-        {
-          text: '重要部分',
-          sublink: [
-            { text: '快速开始', link: 'doc/quick-start' },
-            { text: 'Markdown增强', link: 'doc/markdown' }
-          ]
-        },
+        { text: '快速开始', link: 'doc/quick-start' },
+        { text: 'Markdown增强', link: 'doc/markdown' },
         {
           text: '新手教程',
           sublink: [
-            { text: '环境配置', link: 'doc/beginner/install'},
+            { text: '环境配置', link: 'doc/beginner/install' },
             { text: '安装&使用', link: 'doc/beginner/start' }
           ]
         },
-        {
-          text: '杂项',
-          sublink: [
-            {
-              text: '其他',
-              sublink: [
-                {
-                  text: '其他目录',
-                  link: 'doc/others'
-                },
-                {
-                  text: '目录结构',
-                  link: 'doc/others/menu-struct'
-                },
-                {
-                  text: '页面路由',
-                  link: 'doc/others/page-router'
-                },
-
-              ]
-            },
-            {
-              text: '插件',
-              sublink: [
-                {
-                  text: '插件目录',
-                  link: 'doc/plugin'
-                },
-                {
-                  text: '图片增强插件',
-                  link: 'doc/plugin/el-img'
-                }
-              ]
-            },
-
-          ]
-        },
-
+      ],
+      'config': [
+        { text: '配置', link: 'config' },
+        { text: '主页配置', link: 'config/HomePage' },
+        { text: '导航配置', link: 'config/NavBar'},
+        { text: '其他配置', link: 'config/Others'}
       ]
     },
     editurl: 'https://github.com/open17/vuepress-theme-easy-book/blob/master/example',
-        HighlightOptions:[
-        "atom-one-light",
-        "atom-one-dark",
-        "github",
-        "github-dark",
-        "monokai",
-        "tokyo-night-dark",
-        "tokyo-night-light",
-        "stackoverflow-dark",
-        "stackoverflow-light",
-        "tomorrow-night-blue",
-        "tomorrow-night-bright",
-      ],
-    defaultHighlight:["stackoverflow-dark","stackoverflow-light",],
+    HighlightOptions: [
+      "atom-one-light",
+      "atom-one-dark",
+      "github",
+      "github-dark",
+      "monokai",
+      "tokyo-night-dark",
+      "tokyo-night-light",
+      "stackoverflow-dark",
+      "stackoverflow-light",
+      "tomorrow-night-blue",
+      "tomorrow-night-bright",
+    ],
+    defaultHighlight: ["stackoverflow-dark", "stackoverflow-light",],
     limitHighlight: 5,
-    
+
   }
 }
