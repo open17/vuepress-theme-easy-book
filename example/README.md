@@ -117,22 +117,7 @@ hero:
 
 <HeroSection info="hero"/>
 
-<CardGroup info="card_group"/>  
-
-<div class="mockup-phone">
-  <div class="camera"></div> 
-  <div class="display">
-    <div class="artboard artboard-demo phone-1">
-        <iframe src="/" frameborder="0" class="w-full h-full m-10"></iframe>
-  </div>
-  </div>
-</div>
-
-<div class="mockup-window border bg-base-300 m-5">
-  <div class="flex justify-center px-4 py-16 bg-base-200">
-    <iframe src="/" frameborder="0" class="w-full h-96"></iframe>
-  </div>
-</div>
+<CardGroup info="card_group"/>
 
 
 
