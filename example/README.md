@@ -31,7 +31,7 @@ card_group:
 intro:
   direction: "mid"
   title: "快速构建知识库&文档网站"
-  description: "vuepress-theme-easy-book是一个美观实用的vuepress知识库&文档主题，可以帮助您以简单的配置快速构建出个人知识库网站或文档网站，同时在此基础上提供足量的自定义外观</span>的选择个性化你的网站"
+  description: "vuepress-theme-easy-book是一个美观实用的vuepress知识库&文档主题，可以帮助您以简单的配置快速构建出个人知识库网站或文档网站，同时在此基础上提供足量的自定义外观的选择个性化你的网站"
   leftLink: "/doc"
   leftText: "快速开始"
   rightLink:  "/config"
