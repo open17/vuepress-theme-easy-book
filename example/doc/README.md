@@ -2,6 +2,14 @@
 
 vuepress-theme-easy-book 是一个基于 vuepress[^1] 的 *知识库* 类型主题
 
+
+
+:::hero hero
+:::
+
+
+
+
 ## 特色
 - Markdown增强:针对知识库&文档网站需求的markdown增强，支持代码块、公式、选项卡、To-do List、标签、日历、走马灯、卡片、视频、荧光笔等
 - Tailwindcss+ElementUI:引入Tailwindcss,使你在markdown中书写样式更快捷轻松;支持ElementUI组件库,使你可以在markdown中使用组件快速扩展笔记功能

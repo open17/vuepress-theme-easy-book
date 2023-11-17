@@ -4,7 +4,7 @@
     <RightTocVue :page_header="page_header" v-if="showRight" />
     <div class="flex flex-col" ref="printContent">
       <div
-        class="z-10 relative top-36 left-72 flex justify-center space-x-5 text-gray-500"
+        class="z-10 relative top-36 left-72 flex justify-center space-x-5 "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -165,6 +165,17 @@ export default {
 .markdown-body .header-anchor {
   display: none;
 }
+
+.fixed-orgin-css p{
+  margin-bottom: 0 !important;
+}
+.fixed-orgin-css {
+  padding-bottom:none !important;
+}
+ .markdown-body .fixed-orgin-css pre{
+  background-color: transparent !important;
+}
+
 
 .dark .el-card {
   background-color: #0d1117;

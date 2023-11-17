@@ -15,6 +15,7 @@
     "element-ui": "2.15.13",
     "postcss": "7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-el-img": "^1.0.0",
     "vuepress-plugin-el-tab": "^1.0.1",
     "vuepress-plugin-fulltext-search": "^2.2.1",

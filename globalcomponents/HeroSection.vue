@@ -1,135 +1,40 @@
 <template>
-  <section class="text-gray-600 body-font">
-    <div
-      class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center"
-      v-if=" realDirection == 'left'"
-    >
-      <div
-        class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
-      >
-        <h1
-          class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"
-        >
-          {{ title }}
-        </h1>
-        <p class="mb-8 leading-relaxed">
-          {{ description }}
-        </p>
-        <div class="flex justify-center">
-          <router-link
-            :to="getLeftLink"
-            class="inline-flex text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg"
-          >
-            {{ leftText }}
-          </router-link>
-          <router-link
-            :to="getRightLink"
-            class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"
-          >
-            {{ rightText }}
-          </router-link>
-        </div>
-      </div>
-      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-        <img
-          class="object-cover object-center rounded"
-          alt="hero"
-          :src="getImgUrl"
-        />
-      </div>
-    </div>
-    <div
-      class="container mx-auto flex px-5 py-24 items-center justify-center flex-col"
-      v-else-if=" realDirection == 'mid'"
-    >
+  <div class="hero min-h-screen bg-base-200 w-full">
+    <div class="hero-content flex-col lg:flex-row" :class="{'lg:flex-row-reverse':realDirection=='left','lg:flex-col':realDirection=='mid'}">
       <img
-        class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
-        alt="hero"
         :src="getImgUrl"
+        class="lg:max-w-lg object-cover object-center rounded max-w-full"
       />
-      <div class="text-center lg:w-2/3 w-full">
-        <h1
-          class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"
-        >
-          {{ title }}
-        </h1>
-        <p class="mb-8 leading-relaxed">
-          {{ description }}
-        </p>
-        <div class="flex justify-center">
-          <router-link
-            :to="getLeftLink"
-            class="inline-flex text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg"
-          >
-            {{ leftText }}
-          </router-link>
-          <router-link
-            :to="getRightLink"
-            class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"
-          >
-            {{ rightText }}
-          </router-link>
+      <div class="w-full">
+        <h1 class="text-5xl font-bold"  :class="{'w-1/2 mx-auto text-center':realDirection=='mid'}">{{ title }}</h1>
+        <p class="py-6" :class="{'w-3/4 mx-auto text-center':realDirection=='mid'}">{{ description }}</p>
+        <div class="flex gap-4 lg:justify-start justify-center"  :class="{'lg:justify-center':realDirection=='mid'}">
+          <router-link class="btn btn-primary btn-md" :to="getLeftLink">{{
+          leftText
+        }}</router-link>
+        <router-link class="btn btn-secondary btn-md" :to="getRightLink">{{
+          rightText
+        }}</router-link>
         </div>
       </div>
     </div>
-    <div
-      class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center"
-      v-else
-    >
-      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-        <img
-          class="object-cover object-center rounded"
-          alt="hero"
-          :src="getImgUrl"
-        />
-      </div>
-      <div
-        class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center"
-      >
-        <h1
-          class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"
-        >
-          {{ title }}
-        </h1>
-        <p class="mb-8 leading-relaxed">
-          {{ description }}
-        </p>
-        <div class="flex justify-center">
-          <router-link
-            :to="getLeftLink"
-            class="inline-flex text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg"
-          >
-            {{ leftText }}
-          </router-link>
-          <router-link
-            :to="getRightLink"
-            class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"
-          >
-            {{ rightText }}
-          </router-link>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
 </template>
 
 <script>
 export default {
-  props: [
-    "info",
-    "direction"
-  ],
-  data(){
+  props: ["info", "direction"],
+  data() {
     return {
-    "realDirection":"",
-    "title":"我是标题",
-    "description":"我是描述",
-    "leftLink":"/",
-    "leftText":"左按钮",
-    "rightLink":"/",
-    "rightText":"右按钮",
-    "img":"",
-    }
+      realDirection: "",
+      title: "我是标题",
+      description: "我是描述",
+      leftLink: "/",
+      leftText: "左按钮",
+      rightLink: "/",
+      rightText: "右按钮",
+      img: "",
+    };
   },
   computed: {
     getImgUrl() {
@@ -156,8 +61,8 @@ export default {
       this.rightText = this.$page.frontmatter[this.info].rightText;
       this.img = this.$page.frontmatter[this.info].img;
     }
-    if(this.direction)this.realDirection=this.direction;
-  }
+    if (this.direction) this.realDirection = this.direction;
+  },
 };
 </script>
 

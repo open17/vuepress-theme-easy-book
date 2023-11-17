@@ -8,29 +8,29 @@ module.exports = {
     extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6']
   },
   head: [
-    ['link', { rel: 'icon', href: 'logo.svg' }],
-    [
-      'script',
-      {},
-      `var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?521f6f39625b7ea5ffbfe19f2d223139";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();`
-    ]
+    ['link', { rel: 'icon', href: 'logo.png' }],
   ],
   themeConfig: {
-    icon: "/logo.svg",
-    title: "Easy-Book",
+    icon: "/logo.png",
+    title: "EB",
     lock_password: '123456',
-    nav: [
-      { text: '主页', link: '' },
-      { text: '指南', link: 'doc' },
-      { text: '配置', link: 'config' },
-      { text: '日志', link: 'log' }
-    ],
+    nav: {
+      '主页': '',
+      '指南': 'doc',
+      '配置': 'config',
+      '日志': 'log',
+      "版本":
+      {
+        "新版本":{
+          "v1.3.1": "",
+        "v1.3.0": "",
+        },
+        "旧版本":{
+          "v1.2.5": "",
+        }
+      },
+
+    },
     group: {
       'doc': [
         {
@@ -50,26 +50,10 @@ module.exports = {
       'config': [
         { text: '配置', link: 'config' },
         { text: '主页配置', link: 'config/HomePage' },
-        { text: '导航配置', link: 'config/NavBar'},
-        { text: '其他配置', link: 'config/Others'}
+        { text: '导航配置', link: 'config/NavBar' },
+        { text: '其他配置', link: 'config/Others' }
       ]
     },
     editurl: 'https://github.com/open17/vuepress-theme-easy-book/blob/master/example',
-    HighlightOptions: [
-      "atom-one-light",
-      "atom-one-dark",
-      "github",
-      "github-dark",
-      "monokai",
-      "tokyo-night-dark",
-      "tokyo-night-light",
-      "stackoverflow-dark",
-      "stackoverflow-light",
-      "tomorrow-night-blue",
-      "tomorrow-night-bright",
-    ],
-    defaultHighlight: ["stackoverflow-dark", "stackoverflow-light",],
-    limitHighlight: 5,
-
   }
 }

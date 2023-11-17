@@ -1,19 +1,75 @@
 # Markdown增强
-> 下面部分内容源自[vuepress-theme-pad的Markdown增强文档](https://open17.github.io/vuepress-theme-qbook/cn/markdown.html)
+## 增强容器
+### 信息提示类容器
+::: alert 测试
+你好啊
+:::
 
-## 折叠面板
-```markdown
-<details>
-<summary>折叠面板2</summary>
-这里是内容
-</details>
+::: warning 测试
+你好啊
+:::
+
+::: info 测试
+你好啊
+:::
+
+::: success 测试
+你好啊
+:::
+
+::: error 测试
+你好啊
+:::
+
+```md
+::: alert 测试
+你好啊
+:::
+
+::: warning 测试
+你好啊
+:::
+
+::: info 测试
+你好啊
+:::
+
+::: success 测试
+你好啊
+:::
+
+::: error 测试
+你好啊
+:::
+```
+
+### 折叠面板
+
+:::collapse 我是标题
+我是折叠内容
+:::
+
+```
+:::collapse 我是标题
+我是折叠内容
+:::
+```
+
+### tooltip
+
+:::tooltip 你好呀
+<button class="btn">Hover me</button>
+:::
+
+对于要添加注释的元素，你可以使用:::tooltip 提示 包裹住注释内容，即可实现tooltip效果。
+
+```html
+:::tooltip 你好呀
+<button class="btn">Hover me</button>
+:::
 ```
 
 
-<details>
-<summary>折叠面板2</summary>
-这里是内容
-</details>
 
 ## 视频嵌入
 
