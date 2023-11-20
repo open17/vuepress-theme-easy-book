@@ -2,10 +2,10 @@
   <footer class="footer items-center p-4 bg-neutral text-neutral-content">
     <div class="items-center grid-flow-col">
       <a
-        class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+        class="flex title-font font-medium items-center md:justify-start justify-center"
       >
         <img :src="$withBase($themeConfig.icon)" alt="logo" class="w-10" />
-        <span class="ml-3 text-xl">{{ $themeConfig.title }}</span>
+        <span class="ml-3 text-xl primary">{{ $themeConfig.title }}</span>
       </a>
       <p>{{footer}}</p>
     </div>

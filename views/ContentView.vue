@@ -1,11 +1,9 @@
 <template>
   <div :class="{ dark: is_dark_mode }">
-    <LeftNavVue v-if="showLeft&&navGroup!=null" :navGroup="navGroup"/>
+    <LeftNavVue v-if="showLeft && navGroup != null" :navGroup="navGroup" />
     <RightTocVue :page_header="page_header" v-if="showRight" />
     <div class="flex flex-col" ref="printContent">
-      <div
-        class="z-10 relative top-36 left-72 flex justify-center space-x-5 "
-      >
+      <div class="z-10 relative top-36 left-72 flex justify-center space-x-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -38,16 +36,41 @@
           />
         </svg>
       </div>
+      <button
+        class="btn btn-circle z-10 top-20 left-2 fixed"
+        @click="showLeft = !showLeft"
+        :class="{
+          ' left-52': showLeft,
+        }"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
       <Content
-        class="markdown-body min-h-screen overflow-y-scroll"
+        class="markdown-body min-h-screen overflow-y-scroll pb-20"
         :class="{
           'w-screen pl-10 pr-10 pt-10 absolute top-0 m-0 z-50': isFull,
-          'pt-28 pr-72 w-auto': !isFull,
-          'pl-72':navGroup!=null&&!isFull,
-          'pl-20':navGroup==null&&!isFull,
+          'pt-28 pr-72 w-auto pl-20': !isFull,
+          'pl-72': showLeft,
         }"
       />
-      <FooterSectionVue class="pl-64" v-show="!isFull" />
+      <FooterSectionVue
+        class="pl-20"
+        :class="{
+          'pl-72': showLeft,
+        }"
+        v-show="!isFull"
+      />
     </div>
   </div>
 </template>
@@ -70,7 +93,7 @@ export default {
       showRight: true,
       isFull: false,
       footer_html: ``,
-      navGroup:null,
+      navGroup: null,
     };
   },
   methods: {
@@ -144,38 +167,39 @@ export default {
 .markdown-body h4 {
   margin-inline-start: -0.75rem !important;
   padding-inline-start: 0.75rem;
-  border-inline-start: 0.275rem solid #34495e;
+  border-inline-start: 0.275rem solid hsl(var(--a) / 1);
 }
 
-.dark .markdown-body h1,
-.dark .markdown-body h2,
-.dark .markdown-body h3,
-.dark .markdown-body h4,
-.dark .markdown-body h5,
-.dark .markdown-body h6 {
-  border-inline-start: 0.41rem solid goldenrod;
-}
 .markdown-body h5,
 .markdown-body h6 {
   margin-inline-start: -0.75rem;
   padding-inline-start: 1rem;
-  border-inline-start: 0.41rem solid #34495e;
+  border-inline-start: 0.41rem solid hsl(var(--n) / 1);
 }
 /* markdown样式更改 取消#符号 */
 .markdown-body .header-anchor {
   display: none;
 }
 
-.fixed-orgin-css p{
+.fixed-orgin-css p {
   margin-bottom: 0 !important;
 }
 .fixed-orgin-css {
-  padding-bottom:none !important;
+  padding-bottom: none !important;
 }
- .markdown-body .fixed-orgin-css pre{
+.markdown-body .fixed-orgin-css pre {
   background-color: transparent !important;
 }
 
+.markdown-body {
+  background-color: hsla(var(--b1) / var(--tw-bg-opacity, 1)) !important;
+  color: hsla(var(--bc) / var(--tw-text-opacity, 1)) !important;
+}
+
+.markdown-body ul,
+.markdown-body li {
+  list-style-type: disc !important;
+}
 
 .dark .el-card {
   background-color: #0d1117;
