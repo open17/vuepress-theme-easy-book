@@ -2,6 +2,7 @@
   <div class="hero min-h-screen bg-base-200 w-full">
     <div class="hero-content flex-col lg:flex-row" :class="{'lg:flex-row-reverse':realDirection=='left','lg:flex-col':realDirection=='mid'}">
       <img
+        v-if="this.img"
         :src="getImgUrl"
         class="lg:max-w-lg object-cover object-center rounded max-w-full"
       />
@@ -39,7 +40,7 @@ export default {
   computed: {
     getImgUrl() {
       if (this.img) return this.img;
-      return "https://dummyimage.com/720x600";
+      return null;
     },
     getLeftLink() {
       if (this.leftLink) return this.leftLink;

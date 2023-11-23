@@ -1,5 +1,9 @@
 <template>
-  <div class="overflow-x-hidden bg-base-100" v-if="isLoaded" :data-theme='activeTheme'>
+  <div
+    class="overflow-x-hidden bg-base-100"
+    v-if="isLoaded"
+    :data-theme="activeTheme"
+  >
     <div class="drawer">
       <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content flex flex-col">
@@ -14,10 +18,75 @@
       <div class="drawer-side">
         <label for="my-drawer-3" class="drawer-overlay"></label>
         <ul class="menu p-4 w-80 bg-base-100">
-          <MenuGroupVue :isHorizontal="false"/>
+          <MenuGroupVue :isHorizontal="false" />
         </ul>
       </div>
     </div>
+  </div>
+  <div v-else class="flex justify-center items-center h-screen">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 200 200"
+      class="w-40 mx-auto h-40"
+    >
+      <rect
+        fill="#FF156D"
+        stroke="#FF156D"
+        stroke-width="15"
+        width="30"
+        height="30"
+        x="25"
+        y="50"
+      >
+        <animate
+          attributeName="y"
+          calcMode="spline"
+          dur="2"
+          values="50;120;50;"
+          keySplines=".5 0 .5 1;.5 0 .5 1"
+          repeatCount="indefinite"
+          begin="-.4"
+        ></animate>
+      </rect>
+      <rect
+        fill="#FF156D"
+        stroke="#FF156D"
+        stroke-width="15"
+        width="30"
+        height="30"
+        x="85"
+        y="50"
+      >
+        <animate
+          attributeName="y"
+          calcMode="spline"
+          dur="2"
+          values="50;120;50;"
+          keySplines=".5 0 .5 1;.5 0 .5 1"
+          repeatCount="indefinite"
+          begin="-.2"
+        ></animate>
+      </rect>
+      <rect
+        fill="#FF156D"
+        stroke="#FF156D"
+        stroke-width="15"
+        width="30"
+        height="30"
+        x="145"
+        y="50"
+      >
+        <animate
+          attributeName="y"
+          calcMode="spline"
+          dur="2"
+          values="50;120;50;"
+          keySplines=".5 0 .5 1;.5 0 .5 1"
+          repeatCount="indefinite"
+          begin="0"
+        ></animate>
+      </rect>
+    </svg>
   </div>
 </template>
 
@@ -26,13 +95,13 @@ import "tailwindcss/tailwind.css";
 import ContentPageVue from "../views/ContentView.vue";
 import TopBarVue from "../compentents/TopBar.vue";
 import HomeViewVue from "../views/HomeView.vue";
-import MenuGroupVue from '../compentents/MenuGroup.vue';
+import MenuGroupVue from "../compentents/MenuGroup.vue";
 export default {
   components: {
     TopBarVue,
     HomeViewVue,
     ContentPageVue,
-    MenuGroupVue
+    MenuGroupVue,
   },
   data() {
     return {
@@ -48,7 +117,7 @@ export default {
     };
   },
   methods: {
-    setActiveTheme(theme){
+    setActiveTheme(theme) {
       this.activeTheme = theme;
     },
     getActiveUrl(url) {
@@ -113,8 +182,10 @@ export default {
     this.$watch("$page.path", this.checkLock);
     this.checkHome();
     this.checkLock();
-    this.isLoaded = true; 
     this.$EventBus.$on("changeTheme", this.setActiveTheme);
+    this.$nextTick(() => {
+      this.isLoaded = true; // 第二个操作
+    });
   },
 };
 </script>

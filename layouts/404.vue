@@ -1,21 +1,9 @@
 <template>
-<div class="relative h-screen overflow-hidden">
-    <img src="../assets/404.svg" class="absolute object-cover w-full h-full"/>
-    <div class="absolute inset-0 bg-black opacity-25">
-    </div>
-    <div class="container relative z-10 flex items-center px-6 py-32 mx-auto md:px-12 xl:py-40">
-        <div class="relative z-10 flex flex-col items-center w-full font-mono">
-            <h1 class="mt-4 text-5xl font-extrabold leading-tight text-center text-white">
-                You&#x27;re alone here
-            </h1>
-            <p class="font-extrabold text-white text-8xl my-44 animate-bounce">
-                404
-            </p>
-            <router-link to="/" class=" text-white font-bold text-3xl border-2 rounded-xl p-2">
-            返回
-            </router-link>
-        </div>
-    </div>
+<div class="h-screen flex justify-center items-center w-screen">
+   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+   <router-link to="/" class="flex">
+   <dotlottie-player src="https://lottie.host/a389457c-6165-4b9c-b750-f102084f7a5a/4gyGbyIoL0.json" background="transparent" speed="1" style="width: 80%; height: 80%;" loop autoplay></dotlottie-player>
+   </router-link> 
 </div>
 </template>
 
