@@ -8,10 +8,11 @@ module.exports = {
     extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6']
   },
   head: [
-    ['link', { rel: 'icon', href: 'logo.png' }],
+    ['link', { rel: 'icon', href: 'logo2.png' }],
+    ['script', { src: 'https://cdn.lordicon.com/lordicon-1.4.0.js' }]
   ],
   themeConfig: {
-    icon: "/logo.png",
+    icon: "/logo2.png",
     title: "EB",
     lock_password: '123456',
     nav: {
