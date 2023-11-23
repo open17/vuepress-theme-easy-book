@@ -30,7 +30,7 @@ card_group:
 
 intro:
   direction: "mid"
-  title: "简单配置,快速构建"
+  title: "简单配置&快速构建&知识库"
   description: "vuepress-theme-easy-book是一款配置简单,自定义化的vuepress知识库&文档主题"
   leftLink: "/doc"
   leftText: "快速开始"

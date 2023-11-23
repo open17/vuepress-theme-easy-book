@@ -6,9 +6,9 @@
         :src="getImgUrl"
         class="lg:max-w-lg object-cover object-center rounded max-w-full"
       />
-      <div class="w-full">
-        <h1 class="text-5xl font-bold"  :class="{'w-1/2 mx-auto text-center':realDirection=='mid'}">{{ title }}</h1>
-        <p class="py-6" :class="{'w-3/4 mx-auto text-center':realDirection=='mid'}">{{ description }}</p>
+      <div class="w-full flex justify-center flex-col">
+        <h1 class="text-5xl font-bold"  :class="{'text-center max-w-5xl':realDirection=='mid'}">{{ title }}</h1>
+        <p class="py-6" :class="{'text-center max-w-5xl':realDirection=='mid'}">{{ description }}</p>
         <div class="flex gap-4 lg:justify-start justify-center"  :class="{'lg:justify-center':realDirection=='mid'}">
           <router-link class="btn btn-primary btn-md" :to="getLeftLink">{{
           leftText
