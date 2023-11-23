@@ -9,11 +9,20 @@ module.exports = {
   },
   head: [
     ['link', { rel: 'icon', href: 'logo2.png' }],
-    ['script', { src: 'https://cdn.lordicon.com/lordicon-1.4.0.js' }]
+    ['script', { src: 'https://cdn.lordicon.com/lordicon-1.4.0.js' }],
+    ['script', {}, `
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?521f6f39625b7ea5ffbfe19f2d223139";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    `]
   ],
   themeConfig: {
     icon: "/logo2.png",
-    title: "EB",
+    title: "EASY BOOK",
     lock_password: '123456',
     nav: {
       '主页': '',
