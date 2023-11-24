@@ -23,7 +23,7 @@ module.exports = {
   themeConfig: {
     icon: "/logo2.png",
     title: "EASY BOOK",
-    lock_password: '123456',
+    password: '85783663c1f6165f815ca4d425102d06615261bf719c880335a15325e4739b2e',
     nav: {
       '主页': '',
       '指南': 'doc',

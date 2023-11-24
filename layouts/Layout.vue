@@ -8,11 +8,12 @@
       <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content flex flex-col">
         <TopBarVue class="overflow-x-hidden" :isHome="isHome" />
-        <HomeViewVue class="overflow-x-hidden" v-if="isHome" />
+        <LockViewVue v-if="isLock" />
+        <HomeViewVue class="overflow-x-hidden" v-else-if="isHome" />
         <content-page-vue
           :page_header="getPageHeader()"
           :is_dark_mode="false"
-          v-else-if="!isLock"
+          v-else
         />
       </div>
       <div class="drawer-side">
@@ -96,12 +97,14 @@ import ContentPageVue from "../views/ContentView.vue";
 import TopBarVue from "../compentents/TopBar.vue";
 import HomeViewVue from "../views/HomeView.vue";
 import MenuGroupVue from "../compentents/MenuGroup.vue";
+import LockViewVue from "../views/LockView.vue";
 export default {
   components: {
     TopBarVue,
     HomeViewVue,
     ContentPageVue,
     MenuGroupVue,
+    LockViewVue,
   },
   data() {
     return {
@@ -143,48 +146,22 @@ export default {
     },
     checkLock() {
       this.isLock = this.$page.frontmatter.lock;
-      this.tryOpen();
     },
-    tryOpen() {
-      if (!this.isLock) {
-        return;
-      }
-      this.$prompt("这是一个上锁页面,请输入密码", "提示", {
-        confirmButtonText: "确定",
-        cancelButtonText: "取消",
-      })
-        .then(({ value }) => {
-          if (value == this.$themeConfig.lock_password) {
-            this.isLock = false;
-            this.$message({
-              type: "success",
-              message: "Unlock!",
-            });
-            return;
-          } else {
-            this.$message({
-              type: "error",
-              message: "Try again",
-            });
-            this.tryOpen();
-          }
-        })
-        .catch(() => {
-          this.$message({
-            type: "error",
-            message: "Try again",
-          });
-        });
+    unlockPage() {
+      this.isLock = false;
     },
   },
   mounted() {
-    this.$watch("$page.path", this.setActiveLink);
-    this.$watch("$page.path", this.checkLock);
-    this.checkHome();
     this.checkLock();
+    this.checkHome();
+    this.$watch("$page.path", this.checkLock);
+    this.$watch("$page.path", this.setActiveLink);
     this.$EventBus.$on("changeTheme", this.setActiveTheme);
+    this.$EventBus.$on("unlockPage", this.unlockPage);
     this.$nextTick(() => {
-      this.isLoaded = true; // 第二个操作
+      setTimeout(() => {
+        this.isLoaded = true;
+      }, 1000);
     });
   },
 };

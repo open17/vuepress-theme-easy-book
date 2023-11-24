@@ -5,13 +5,14 @@
   "author": "open17",
   "license": "GPL-3.0",
   "repository": "https://github.com/open17/vuepress-theme-easy-book.git",
-  "description": "🌠 一款美观,知识库向的vuepress主题",
+  "description": "🌠 一款配置简单,自定义化的vuepress知识库&文档主题",
   "scripts": {
     "dev": "vuepress dev example",
     "build": "vuepress build example"
   },
   "dependencies": {
     "autoprefixer": "9",
+    "crypto-js": "^4.2.0",
     "element-ui": "2.15.13",
     "postcss": "7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",

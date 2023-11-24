@@ -137,9 +137,9 @@ export default {
         var group = this.$themeConfig.group;
         if (group[data]) {
           this.navGroup = group[data];
-          // console.log(this.navGroup);
         }
       }
+      if (this.navGroup == null) this.showLeft = false;
     },
   },
   mounted() {
