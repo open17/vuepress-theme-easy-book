@@ -125,6 +125,14 @@ module.exports = (options, ctx) => {
             after: '</div>',
           },
         ],
+        [
+          'vuepress-plugin-container',
+          {
+            type: 'video',
+            before: info => `<IVideo url="${info}" />`,
+            after: '',
+          },
+        ],
       ],
     };
   };

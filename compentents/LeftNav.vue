@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed top-0 pt-24 hidden h-screen lg:block w-60 overflow-y-scroll bg-base-200"
+    class="fixed top-0 pt-24 h-screen block w-60 overflow-y-scroll bg-base-200"
   >
     <div class="h-full">
       <nav class="mt-6">

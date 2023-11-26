@@ -1,24 +1,14 @@
 <template>
   <div>
     <iframe
-      :width="w"
-      :height="h"
-      :src="youtube_url"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-      v-if="youtube"
-    ></iframe>
-    <iframe
-      :width="w"
-      :height="h"
-      :src="bv_url"
+      class="w-full h-96"
+      :src="getUrl()"
       scrolling="no"
       border="0"
       frameborder="no"
       framespacing="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen="true"
-      v-else
     >
     </iframe>
   </div>
@@ -26,13 +16,15 @@
 
 <script>
 export default {
-  props: ["w", "h", "bv", "youtube"],
-  computed: {
-    youtube_url() {
-      return "https://www.youtube.com/embed/" + this.youtube;
-    },
-    bv_url(){
-        return "https://player.bilibili.com/player.html?bvid="+this.bv+"&autoplay=0";
+  props: ["url"],
+  data(){
+    return {
+    }
+  },
+  methods:{
+    getUrl(){
+      if(this.url.startsWith("BV"))return "https://player.bilibili.com/player.html?bvid="+this.url+"&autoplay=0";
+      else return "https://www.youtube.com/embed/"+this.url;
     }
   },
 };

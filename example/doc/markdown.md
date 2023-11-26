@@ -78,11 +78,13 @@
 <[bilibili]
 
 ```html
-<IVideo w="560" h="351" bv="BV1CV4y1b72n" />
-<!-- w 宽 h 高 -->
+:::video BV1CV4y1b72n
+:::
 ```
 <br/>
-<IVideo w="560" h="351" bv="BV1CV4y1b72n" />
+
+:::video BV1CV4y1b72n
+:::
 
 
 
@@ -91,12 +93,14 @@
 <[youtube]
 
 ```html
-<IVideo w="590" h="351" youtube="5Kqyhu_eIcw" />
-<!-- w 宽 h 高 -->
+:::video 5Kqyhu_eIcw
+:::
 ```
 
 <br/>
 
+:::video 5Kqyhu_eIcw
+:::
 
 <()
 
@@ -264,5 +268,3 @@ inline void write(int x)
 
 
 @@tab
-
-## $a^1_{1}$ 

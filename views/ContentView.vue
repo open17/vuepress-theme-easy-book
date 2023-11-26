@@ -1,7 +1,7 @@
 <template>
   <div :class="{ dark: is_dark_mode }">
     <LeftNavVue v-if="showLeft && navGroup != null" :navGroup="navGroup" />
-    <RightTocVue :page_header="page_header" v-if="showRight" />
+    <RightTocVue :page_header="page_header" v-if="showRight" class=" hidden lg:block"/>
     <div class="flex flex-col" ref="printContent">
       <div class="z-10 relative top-36 left-72 flex justify-center space-x-5">
         <svg
@@ -57,17 +57,17 @@
         </svg>
       </button>
       <Content
-        class="markdown-body min-h-screen overflow-y-scroll pb-20"
+        class="markdown-body min-h-screen overflow-y-scroll pb-20 pr-10"
         :class="{
-          'w-screen pl-10 pr-10 pt-10 absolute top-0 m-0 z-50': isFull,
-          'pt-28 pr-72 w-auto pl-20': !isFull,
-          'pl-72': showLeft,
+          'w-screen pl-10 pt-10 absolute top-0 m-0 z-50 hide-copy-button': isFull,
+          'pt-28 lg:pr-72 w-auto pl-20': !isFull,
+          'pl-72 hidden lg:block': showLeft,
         }"
       />
       <FooterSectionVue
         class="pl-20"
         :class="{
-          'pl-72': showLeft,
+          'pl-72  lg:flex justify-between hidden': showLeft,
         }"
         v-show="!isFull"
       />
@@ -152,6 +152,9 @@ export default {
 </script>
 
 <style>
+.hide-copy-button .mycodeblock .code-copy-button{
+  display: none !important;
+}
 .markdown-body h1,
 .markdown-body h2,
 .markdown-body h3,

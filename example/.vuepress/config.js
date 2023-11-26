@@ -26,20 +26,18 @@ module.exports = {
     password: '85783663c1f6165f815ca4d425102d06615261bf719c880335a15325e4739b2e',
     nav: {
       '主页': '',
-      '指南': 'doc',
-      '配置': 'config',
-      '日志': 'log',
-      "版本":
-      {
-        "新版本":{
-          "v1.3.1": "",
-        "v1.3.0": "",
+      '指南': {
+        '新手教程':{
+          '相关环境配置':'doc/beginner/install',
+          '主题安装&使用':'doc/beginner/start'
         },
-        "旧版本":{
-          "v1.2.5": "",
+        '文档':{
+          '快速开始':'doc/quick-start',
+          'Markdown增强':'doc/markdown',
         }
       },
-
+      '配置': 'config',
+      '日志': 'log',
     },
     group: {
       'doc': [
