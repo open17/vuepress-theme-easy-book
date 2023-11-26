@@ -62,8 +62,8 @@ hero:
 :::hero intro
 :::
 
-<div class="flex-wrap items-center justify-center gap-8 text-center sm:flex">
-    <div class="w-full px-4 py-4 mt-6 bg-white rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 dark:bg-gray-800">
+<div class="flex-wrap items-center justify-center gap-8 text-center sm:flex bg-base-200">
+    <div class="w-full px-4 py-4 mt-6 bg-base-100 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4  ">
         <div class="flex-shrink-0">
             <div class="flex items-center justify-center w-12 h-12 mx-auto text-white bg-primary rounded-md">
       <lord-icon
@@ -74,14 +74,14 @@ hero:
       </lord-icon>       
             </div>
         </div>
-        <h3 class="py-4 text-2xl font-semibold text-gray-700 sm:text-xl dark:text-white">
+        <h3 class="py-4 text-2xl font-semibold text-bold sm:text-xl  ">
             Markdown增强
         </h3>
-        <p class="py-4 text-gray-500 text-md dark:text-gray-300">
+        <p class="py-4    text-md    ">
             针对知识库&文档网站需求的markdown增强，支持代码块、公式、选项卡、To-do List、标签、日历、走马灯、卡片、视频、荧光笔等
         </p>
     </div>
-    <div class="w-full px-4 py-4 mt-6 bg-white rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 sm:mt-16 md:mt-20 lg:mt-24 dark:bg-gray-800">
+    <div class="w-full px-4 py-4 mt-6 bg-base-100 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 sm:mt-16 md:mt-20 lg:mt-24  ">
         <div class="flex-shrink-0">
             <div class="flex items-center justify-center w-12 h-12 mx-auto text-white bg-primary rounded-md">
       <lord-icon
@@ -93,14 +93,14 @@ hero:
       </lord-icon>       
             </div>
         </div>
-        <h3 class="py-4 text-2xl font-semibold text-gray-700 sm:text-xl dark:text-white">
+        <h3 class="py-4 text-2xl font-semibold text-bold sm:text-xl  ">
             Tailwindcss+ElementUI
         </h3>
-        <p class="py-4 text-gray-500 text-md dark:text-gray-300">
+        <p class="py-4    text-md    ">
             引入Tailwindcss,使你在markdown中书写样式更快捷轻松;支持ElementUI组件库,使你可以在markdown中使用组件快速扩展笔记功能
         </p>
     </div>
-    <div class="w-full px-4 py-4 mt-6 bg-white rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 dark:bg-gray-800">
+    <div class="w-full px-4 py-4 mt-6 bg-base-100 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4  ">
         <div class="flex-shrink-0">
             <div class="flex items-center justify-center w-12 h-12 mx-auto text-white bg-primary rounded-md">
       <lord-icon
@@ -111,10 +111,10 @@ hero:
       </lord-icon>       
             </div>
         </div>
-        <h3 class="py-4 text-2xl font-semibold text-gray-700 sm:text-xl dark:text-white">
+        <h3 class="py-4 text-2xl font-semibold text-bold sm:text-xl  ">
             足量全局组件
         </h3>
-        <p class="py-4 text-gray-500 text-md dark:text-gray-300">
+        <p class="py-4    text-md    ">
             CTA,卡片组,Logo组,HeroSection...足量预先封装好的全局组件,支持你在Markdown中随意使用,轻松构建主页,快速开发页面
         </p>
     </div>

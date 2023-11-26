@@ -1,7 +1,8 @@
 <template>
   <div>
     <iframe
-      class="w-full h-96"
+      class="w-full"
+      height="600"
       :src="getUrl()"
       scrolling="no"
       border="0"

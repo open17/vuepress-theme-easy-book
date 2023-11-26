@@ -3,7 +3,7 @@
     <LeftNavVue v-if="showLeft && navGroup != null" :navGroup="navGroup" />
     <RightTocVue :page_header="page_header" v-if="showRight" class=" hidden lg:block"/>
     <div class="flex flex-col" ref="printContent">
-      <div class="z-10 relative top-36 left-72 flex justify-center space-x-5">
+      <div class="z-10 relative top-36 left-72 lg:flex justify-center space-x-5 hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -37,10 +37,10 @@
         </svg>
       </div>
       <button
-        class="btn btn-circle z-10 top-20 left-2 fixed"
+        class="btn btn-circle z-50 lg:top-20 lg:left-2 fixed top-3 right-5"
         @click="showLeft = !showLeft"
         :class="{
-          ' left-52': showLeft,
+          ' lg:left-52': showLeft,
         }"
       >
         <svg
@@ -57,17 +57,17 @@
         </svg>
       </button>
       <Content
-        class="markdown-body min-h-screen overflow-y-scroll pb-20 pr-10"
+        class="markdown-body min-h-screen overflow-y-scroll pb-20 pr-10 pl-10"
         :class="{
-          'w-screen pl-10 pt-10 absolute top-0 m-0 z-50 hide-copy-button': isFull,
-          'pt-28 lg:pr-72 w-auto pl-20': !isFull,
-          'pl-72 hidden lg:block': showLeft,
+          'w-screen pt-10 absolute top-0 m-0 z-50 hide-copy-button': isFull,
+          'pt-28 lg:pr-72 w-auto lg:pl-20': !isFull,
+          'lg:pl-72 pl-72 hidden lg:block': showLeft,
         }"
       />
       <FooterSectionVue
         class="pl-20"
         :class="{
-          'pl-72  lg:flex justify-between hidden': showLeft,
+          'pl-72 hidden': showLeft,
         }"
         v-show="!isFull"
       />
