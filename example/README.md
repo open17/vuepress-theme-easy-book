@@ -12,7 +12,7 @@ card_group:
   - img_url: "6.webp"
     description: "多种主题随意切换切换"
     title: "主题切换"
-    link: "/"
+    link: "https://daisyui.com/docs/themes/"
     badge: "新增"
   - img_url: "4.webp"
     description: "快捷按钮一键跳转到编辑页面"

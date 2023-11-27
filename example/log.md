@@ -15,8 +15,10 @@
 - [ ] PWA支持
 - [ ] npx一键安装
 - [ ] @tailwindcss/typography
+- [ ] 更新daisaiui
 
 ## v1.3.6
+- 修复card外部链接检测
 - 优化移动端布局
 - 修改视频容器高度
 ## v1.3.5
