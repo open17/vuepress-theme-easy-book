@@ -17,6 +17,10 @@
 - [ ] @tailwindcss/typography
 - [ ] 更新daisaiui
 
+## v1.3.7
+- 修复title和icon没有配置时报错
+- 修复topbar外部链接检测
+
 ## v1.3.6
 - 修复card外部链接检测
 - 优化移动端布局

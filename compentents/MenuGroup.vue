@@ -26,24 +26,28 @@
                 v-for="(vv, kk, idx) in v"
                 :key="index + indexs + idx + k + v"
               >
-                <router-link :to="'/' + vv">{{ kk }}</router-link>
+                <BetterLinkVue :to="vv">{{ kk }}</BetterLinkVue>
               </li>
             </template>
             <li :key="indexs + k + v" v-else>
-              <router-link :to="'/' + v">{{ k }}</router-link>
+              <BetterLinkVue :to="v">{{ k }}</BetterLinkVue>
             </li>
           </template>
         </ul>
       </li>
       <li v-else :key="index">
-        <router-link :to="'/' + value">{{ key }}</router-link>
+        <BetterLinkVue :to="value">{{ key }}</BetterLinkVue>
       </li>
     </template>
   </ul>
 </template>
 
 <script>
+import BetterLinkVue from './BetterLink.vue';
 export default {
+  components: {
+    BetterLinkVue
+  },
     props: ['isHorizontal'],
     data() {
     return {

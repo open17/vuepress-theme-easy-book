@@ -38,6 +38,10 @@ module.exports = {
       },
       '配置': 'config',
       '日志': 'log',
+      '版本':{
+        '新版':'',
+        '旧版':'https://open17.github.io/vuepress-theme-easy-book/'
+      }
     },
     group: {
       'doc': [

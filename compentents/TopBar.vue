@@ -22,7 +22,7 @@
             </label>
           </div>
           <div class="flex-1">
-            <router-link class="btn btn-ghost normal-case text-xl" to="/">
+            <router-link class="btn btn-ghost normal-case text-xl" to="/" v-if="$themeConfig.icon">
               <img
                 :src="$withBase($themeConfig.icon)"
                 alt="logo"

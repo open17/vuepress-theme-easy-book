@@ -4,7 +4,7 @@
       <a
         class="flex title-font font-medium items-center md:justify-start justify-center"
       >
-        <img :src="$withBase($themeConfig.icon)" alt="logo" class="w-10" />
+        <img :src="$withBase($themeConfig.icon)" alt="logo" class="w-10" v-if="$themeConfig.icon"/>
         <span class="ml-3 text-xl primary">{{ $themeConfig.title }}</span>
       </a>
       <p>{{footer}}</p>

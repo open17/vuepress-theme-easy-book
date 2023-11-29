@@ -18,6 +18,7 @@ module.exports = (options, ctx) => {
   };
   if(!siteConfig.themeConfig)siteConfig.themeConfig={};
   else if(!siteConfig.themeConfig.searchMaxSuggestions)siteConfig.themeConfig.searchMaxSuggestions=50;
+  if(!siteConfig.themeConfig.title)siteConfig.themeConfig.title=siteConfig.title;
     return {
       chainWebpack: (config) => {
         config.resolve.alias.set('core-js/library/fn', 'core-js/features');
